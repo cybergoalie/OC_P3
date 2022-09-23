@@ -1,34 +1,83 @@
-body {
-
+/* prepare html document */
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0;
 }
-
-header {
-
+/* target the html and set a background color */
+html{
+    background-color: #f2f2f2;
+}
+/* target the body and put in the center of the page */
+body header, main {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
 }
 
 .main-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
 
 }
 
 .logo {
-
+    padding: 20px;
+    width: 60%;
+ 
 }
 
 .logo img {
-
+width: 100%;
 }
+
 
 .nav-link {
-
+    width: 100%;
+    padding: 20px 0px;
+    font-weight: bold;
+    background-color: rgba(128, 128, 128, 0.075);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.nav-icon {
-
+.navlink-icon {
+height: 100%;
 }
 
-.location-link {
+.location-form {
+    text-decoration: none;
+    color: black;
+        margin-left: 10px;
+        font-size: 18px;
+        font-weight: 500;
+        background-color: rgba(128, 128, 128, 0.075);
+        border: none;
+        border-radius: 20px;
+        padding-left: 10px;
+        width: 45%;
+        outline: none;
 
 }
+/*apply hover effects to menu options*/
+.location-form:active {
+    border: none;
+    
+}
+.location-form::placeholder {
+    font-color: black;
+  font-weight: 700;
+  font-family: Roboto;
+  font-size: 18px;
+}
+
+
+
+/* Quick Search Container Begins */
 
 .quick-search-container {
 
@@ -45,6 +94,10 @@ header {
 .explore-btn {
 
 }
+
+/* Quick Search Container Ends */
+
+/* Explaining the Process Section Begins */
 
 .process-section {
 
@@ -106,6 +159,10 @@ header {
 
 }
 
+/* PROCESS SECTION ENDS */
+
+/* RESTAURANT SECTION BEGINS */
+
 .rest-section-container {
 
 }
@@ -162,30 +219,166 @@ header {
 
 }
 
+/* RESTAURANT SECTION ENDS */
+
+/* FOOTER BEGINS */
+
 .footer-section {
+    display: flex;
+    flex-flow: column-wrap;
+    width: 100%;
+    background-color: black;
+    font-color: white;
+    justify-content: flex-start;
 
 }
 
 .footer-logo {
-
+    filter: -webkit-filter: invert(1); 
+    filter: invert(1);
 }
 
 .footer-link {
-
+    color: white;
+    text-decoration: none;
+/* not sure why, but placing color:white and text-decor:none here did nothing to affect my site */
 }
 
 .suggest-link {
-
+    color: white;
+    text-decoration: none;
 }
 
 .partner-link {
-
+    color: white;
+    text-decoration: none;
 }
 
 .legal-link {
-
+    color: white;
+    text-decoration: none;
 }
 
 .contact-link {
+    color: white;
+    text-decoration: none;
+}
+
+/* FOOTER ENDS */
+
+/* STYLE FOR lARGE TABLET SCREEN */
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
 
 }
+
+/*  STYLE FOR SMALL TABLET SCREEN */
+
+@media only screen and (min-width: 415px) and (max-width: 768px) {
+
+}
+
+
+/* STYLE FOR SMALL MOBILE/PHONE SCREEN */
+
+
+/* main nav bar begins */
+
+
+    
+
+ 
+    
+    .locations {
+        padding-left: 9
+    }
+    /* EXPLORE SECTION BEGINS */
+    
+    .search {
+        padding-left: 30px;
+        width: 100%; 
+    }
+    
+   
+ 
+    /* EXPLORE SECTION ends */
+    
+    /* PROCESS section begins */
+    .filters-section {
+        flex-direction: column;
+        align-items: ;
+        margin: ;
+    }
+    
+    .filters-headline h3 {
+        padding: ;
+        font-size: ;
+        display: ;
+        justify-content: ;
+        margin-right: ;
+    }
+    
+    .filter-button {
+        margin-bottom: ;
+        margin-left: ;
+    }
+    
+    .button-text {
+        padding: ;
+    }
+    .button-text {
+        padding: ;
+        justify-content: ;
+    }
+    
+    .filter-icon {
+        justify-content: ;
+    }
+    /* FILTER BUTTONS SECTION ENDS */
+    
+    
+ 
+    
+    /* END QUICK SEARCH SECTION */
+    
+
+  
+    
+    /* BEGIN ACCOMMODATIONS SECTION */
+    
+    
+    .accom-section-container {
+        background-color: ;
+        max-width: ;
+        border-radius: 0;
+        margin: ;
+        padding: ;
+    }
+    
+    .accom-headline {
+        padding: ;
+    }
+    
+    .accom-card-container {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+     
+    .accom-card {
+        width: 90%;  
+    }
+    
+    .accom-img {
+        height: 65%;
+    }
+    
+    .accom-footer {
+        display: block;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        width: 100%;
+    }
+    
+    /*ACCOMMODATION SECTION ENDS */
+   
