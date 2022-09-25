@@ -25,7 +25,7 @@ body header, main {
 }
 
 .logo {
-    padding: 20px;
+    padding: 25px 0px 20px 0px;
     width: 60%;
  
 }
@@ -39,7 +39,7 @@ width: 100%;
     width: 100%;
     padding: 20px 0px;
     font-weight: bold;
-    background-color: rgba(128, 128, 128, 0.096);
+    background-color: rgba(128, 128, 128, 0.205);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,14 +52,14 @@ height: 100%;
 .location-form {
     text-decoration: none;
     color: black;
-        margin-left: 10px;
+        margin-left: 5px;
         font-size: 18px;
         font-weight: 500;
         background-color: rgba(128, 128, 128, 0.027);
         border: none;
         border-radius: 20px;
         padding-left: 10px;
-        width: 53%;
+        width: 38%;
         outline: none;
 
 }
@@ -86,7 +86,7 @@ height: 100%;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-background-color: #d8d5d728;
+background-color: #d8d5d752;
 }
 
 .quick-search-headline {
@@ -101,17 +101,19 @@ font-size: 18px;
 text-align: center;
 font-weight: 400;
 }
-
+/* offset-x | offset-y | blur-radius | spread-radius | color */
 .explore-btn {
 border: none;
-box-shadow: 0 0 8px 1px rgba(0, 0, 0, .1);
+box-shadow: 0 4px 8px 0px rgba(0, 0, 0, .2);
 color: white;
 padding: 15px 30px;
-margin: 30px;
+margin-bottom: 50px;
+margin-top: 30px;
 font-size: 18px;
 border-radius: 30px;
 background: rgb(131,58,180);
 background: radial-gradient(circle, rgba(131,58,180,1) 0%, rgba(173,115,204,1) 50%, rgba(220,138,223,1) 100%);
+cursor: pointer;
 }
 
 /* Quick Search Container Ends */
@@ -128,27 +130,78 @@ background: radial-gradient(circle, rgba(131,58,180,1) 0%, rgba(173,115,204,1) 5
 
 .process-headline {
     font-size: 20px;
+    width: 100%;
+    margin: 30px 0px;
+    padding-left: 30px;
 
 }
 
 .process-btn-container {
     display: flex;
+    flex-wrap: wrap;
     width: 100%; 
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
 .process-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+border: none;
+padding: 10px 30px;
+border-radius: 15px;
+box-shadow: 0 4px 8px 0px rgba(0, 0, 0, .2);
+background-color: #d8d5d752;
+cursor: pointer;
 
 }
+
+.process-btn:hover {
+    background-color: rgba(229, 211, 250, 0.356);
+
+}
+.process-btn:hover .process-btn-icon {
+    color: #9356dc;
+    
+}
+
+.componentWrapper {
+    border: none;
+    border-radius: 40px;
+    width: 80%;
+    margin-bottom: 50px;
+  }
+  
+  .componentWrapper .how-to-step {
+    position:absolute;
+    margin-left:-15px;
+    margin-top: 38px;
+    color:white;
+    background: #9356dc;
+font-size: 18px;
+    border-radius:50%;
+    padding:2px 10px;
+    
+  }
+
 
 .process-btn-icon {
 
+margin-right: 30px;
+margin-left: 20px;
+font-size: 20px;
 }
 
-.process-btn-text {
 
+
+.process-btn-text {
+font-size: 18px;
+font-weight: bold;
+margin-right: 10%;
 }
 
 .btn-1 {
@@ -192,7 +245,7 @@ background: radial-gradient(circle, rgba(131,58,180,1) 0%, rgba(173,115,204,1) 5
 /* RESTAURANT SECTION BEGINS */
 
 .rest-section-container {
-    background-color: #e6bdd81c;
+    background-color: #d8d5d752;
     display: flex;
     width: 100%; 
     flex-direction: column;
@@ -202,17 +255,40 @@ background: radial-gradient(circle, rgba(131,58,180,1) 0%, rgba(173,115,204,1) 5
         
 .rest-headline {
 width: 96%;
-padding-left: 30px;
+padding-left: 35px;
 padding-top: 60px;
 }
 
 .rest-card-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
     display: flex;
     width: 100%; 
     flex-direction: column;
     justify-content: space-evenly;
     align-content: center;
     height: auto;
+}
+
+.new-rest-wrapper {
+    position: relative;
+    text-align: left;
+    color: rgb(126, 206, 226);
+    width: 100%;
+}
+
+.new-rest-label {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #267963ce;
+    background: #99E2D0;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 2px;
+    padding: 5px 30px;
+    
+
 }
 
 .rest-card {
@@ -222,11 +298,21 @@ padding-top: 60px;
     align-items: flex-start;
 background-color: white;
 box-shadow: 0 0 8px 1px rgba(0, 0, 0, .1);
-    height: 350px;
+    height: 330px;
     border-radius: 20px;
+    margin: 30px;
+    text-decoration: none;
+    position: relative;
 
-    margin: 40px 0px 80px 20px;
-    padding: 10px;
+}
+
+
+.rest-card:hover {
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, .5);
+}
+
+.rest-card:active {
+    color: black;
 }
 
 .rest-card-1 {
@@ -234,7 +320,7 @@ box-shadow: 0 0 8px 1px rgba(0, 0, 0, .1);
 }
 
 .rest-img {
-height: 85%;
+height: 75%;
 width: 100%;
 object-fit: cover;
 border-radius: 15px;
@@ -243,24 +329,110 @@ border-bottom-right-radius: 0;
 }
 
 .rest-textbar {
-padding: 10px;
+    display: inline-flex;
+    width: 100%;
+    color: black;
+    justify-content: space-between;
+    align-items: center;
+padding: 20px 10px 15px 10px;
 }
 
 .rest-text {
+margin-left: 10px;
 
 }
 
 .rest-text h3 {
+font-weight: 700;
+font-size: 20px;
 
 }
 
 .rest-text p {
-
+padding-top: 5px;
 }
 
-.rest-textbar-icon {
 
+
+
+/* added the following to get the heart to fill on click... ask Muntasim to help understand all these commands */
+:root {
+    --stroke-width: 2px;
+    --heart-width: 48px;
+    --transition-length: 1.2s;
+    --heart-color: #9356dc;
+     
 }
+ 
+    .heart-container {
+        height: 100%;
+    position: relative;
+    width: var(--heart-width, 100px);
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    clip-path: url(#svgClip);
+    margin-top: -5px;
+    margin-right: 15px;
+ }
+ 
+ .heart-clip {
+    appearance: none;
+    margin: 0px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    overflow: hidden;
+    z-index: 2;
+    cursor: pointer;
+    color: black;
+ }
+ 
+ .heart-clip + .fill {
+    top:0;
+    left:0;
+    transform: translateY(50%);
+    width: calc(2 * var(--heart-width, 100px));
+    aspect-ratio: 1/1;
+    transition: transform var(--transition-length, 0s) cubic-bezier(.2, .6, .8, .4);
+ }
+   
+ .heart-clip:checked + .fill {
+    transform: translateY(0);
+ }
+ 
+ .heart-stroke {
+    width: calc(100% - (2 * var(--stroke-width, 2px)));
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: var(--stroke-width, 0);
+    left: var(--stroke-width, 0);
+    fill: transparent;;
+    stroke: var(--heart-color);
+    stroke-width: var(--stroke-width, 1px);
+ }
+ 
+ .waveShape {
+    animation-name: waveAction;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    fill: var(--heart-color);
+ }
+ 
+ @keyframes waveAction {
+    0% {
+       transform: translate(-175px, 0px);
+    }
+    100% {
+       transform: translate(0px, 0px);
+    }
+ }
+
+
+
+
 
 .rest-card-1 {
 
@@ -286,20 +458,32 @@ padding: 10px;
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: auto;
     background-color: black;
-    font-color: white;
     justify-content: flex-start;
+    padding: 30px;
 
 }
 
 .footer-logo {
     filter: -webkit-filter: invert(1); 
     filter: invert(1);
+    width: 33%;
+}
+
+.footer-link-container {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .footer-link {
-    color: white;
-    text-decoration: none;
+   
+    margin-top: 15px;
 /* not sure why, but placing color:white and text-decor:none here did nothing to affect my site */
 }
 
