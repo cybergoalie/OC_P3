@@ -20,7 +20,13 @@
     </head>
   <!-- BODY OF HTML BEGINS -->
   <body>
-    <!-- HEADER BEGINS -->
+    
+    <div id="loading-wrapper">
+        <div id="hideMe">
+            <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        </div>
+    </div>
+  <!-- HEADER BEGINS -->
     <header>
       <!-- MAIN NAV BAR BEGINS -->
         <nav class="main-nav">
@@ -38,7 +44,7 @@
         <section class="quick-search-container">
             <h1 class="quick-search-headline">Book the menu you like</h1>
             <p class="quick-search-subtitle">Discover top-of-the-art restaurants we picked for you</p>
-            <button type="button" class="explore-btn">Explore our restaurants</button> 
+            <button type="button" class="btn explore-btn">Explore our restaurants</button> 
         </section>
       <!-- QUICK SEARCH SECTION ENDS -->
 
@@ -50,19 +56,19 @@
         
             <div class="process-btn-container">
                 <div class='componentWrapper'><div class="how-to-step step-1">1</div>
-                    <button type="button" class="process-btn btn-1">
+                    <button type="button" class="btn process-btn btn-1">
                         <i class="fa-solid fa-mobile-screen-button process-btn-icon pbi-1"></i>
                         <span class="process-btn-text pbt-1">Choose a restaurant</span>
                     </button>
                 </div>
                 <div class='componentWrapper'><div class="how-to-step step-2">2</div>   
-                    <button type="button" class="process-btn btn-2">
+                    <button type="button" class="btn process-btn btn-2">
                         <i class="fa-solid fa-list process-btn-icon pbi-2"></i>
                         <span class="process-btn-text pbt-2">Create your menu</span>
                     </button>
                 </div>
                 <div class='componentWrapper'><div class="how-to-step step-3">3</div>
-                    <button type="button" class="process-btn btn-1">
+                    <button type="button" class="btn process-btn btn-1">
                         <i class="fa-solid fa-store process-btn-icon pbi-3"></i>
                         <span class="process-btn-text pbt-3">Go enjoy it at the restaurant</span>
                     </button>
@@ -173,19 +179,6 @@
                             <h3>Le Gourmand</h3>
                             <p>New York</p>
                         </div>
-                        <div class="like-container">
-                            <i class="fa-solid fa-heart heart-icon"></i></div>
-                    </div>
-                </a>
-
-
-                <a class="rest-card rest-card-4" href="#">
-                    <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Delicate fish filet with cinnamon sticks" class="rest-img">
-                    <div class="rest-textbar">
-                        <div class="rest-text">
-                            <h3>Le Gourmand</h3>
-                            <p>New York</p>
-                        </div>
                         <div class="heart-container">
                             <svg viewBox="0 0 100 100" class='heart-stroke'>
                                 <path d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z" />    
@@ -194,7 +187,8 @@
                             <input type='checkbox' class='heart-clip'>
                             <div class="fill">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                            viewBox="0 0 400 400" xml:space="preserve">
+
+                            viewBox="0 0 200 200" xml:space="preserve">
                                    <path d="M0,6c100,10,100,-10,200,0c100,10,100,-10,200,0v394h-400Z" class="waveShape"></path>
                                 </svg>
                             </div>

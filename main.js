@@ -1,5 +1,5 @@
 $(function() {
-    $( ".heart-icon" ).click(function() {
-      $( ".heart-icon" ).toggleClass( "press", 1000 );
+    $( "heart-icon" ).click(function() {
+      $( "heart-icon" ).toggleClass( "press", 1000 );
     });
-  });
+  })
