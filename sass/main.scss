@@ -11,101 +11,66 @@
 
 @import "./components/buttons";
 
-@import "./layouts/header";
-@import "./layouts/nav";
-@import "./layouts/container";
-@import "./layouts/form";
+@import "./layout/header";
+@import "./layout/nav";
+@import "./layout/container";
+@import "./layout/form";
 
 @import "./pages/rest1.scss";
 @import "./pages/rest2";
 @import "./pages/rest3";
 @import "./pages/rest4";
 
-.like-container {
-    height:100px;
-    margin:0 auto;
-    position: relative;
-  }
-  
-.heart-icon {
-    cursor:pointer;
-    padding:10px 12px 8px;
-    background:#fff;
-    border-radius:50%;
-    display:inline-block;
-    margin:0 0 15px;
-    color:#aaa;
-    transition:.2s;
-  }
-  
-.heart-icon:hover {
-    color:#666;
-  }
-  
-.heart-icon:before {
-    font-family:fontawesome;
-    content:'\f004';
-    font-style:normal;
-  }
-  
- 
-  
-.heart-icon.press {
-    animation: size .4s;
-    color:#e23b3b;
-  }
-  
- 
-  
-  @keyframes fade {
-    0% {color:#transparent;}
-    50% {color:#e23b3b;}
-    100% {color:#transparent;}
-  }
-  
-  @keyframes size {
-    0% {padding:10px 12px 8px;}
-    50% {padding:14px 16px 12px;  
-      margin-top:-4px;}
-    100% {padding:10px 12px 8px;}
+/* 1. Utils: store variables, functions, mixins, and %placeholders for extensions (if you use them) */
+
+/* 2. Vendors: a directory for third-party library style sheets such as Bootstrap or jquery UI */
+
+/* 3. Base: files that define the foundation of your site, such as the typography and norms you want applied site-wide, like box-sizing */
+
+/*  4. Components: store BEM blocks that are more self-contained, such as buttons */
+
+/*  5. Layouts: store BEM blocks which contain things that can be reused, such as a form or header for large layouts */
+
+/* 6. Pages: contains blocks of code/rules specific to a single page and won't be reused elsewhere */
+
+/*  7. Themes: store thematic code, such as custom styling for Christmas or Halloween */
+
+
+/* the following code achieves the partial underline */
+.menu-header:before {
+    position: absolute;
+    left: 0;
+    top: 1.5em;
+    height: 0;
+    width: 50px;
+    content: '';
+    border-top: 3px solid #99E2D0;
   }
 
-
-  /*css for the spinning loader */
-
-/* 1. store variables, functions, mixins, and %placeholders for extensions (if you use them) */
-
-1. Utils/
-/* @import "./utils/variables" ...when written in this main.scss file, this will track to the utilities folder within the same directory*/
-
-
-/* 2. a directory for third-party library style sheets such as Bootstrap or jquery UI */
-
-2. Vendors/
-
-
-/* 3. files that define the foundation of your site, such as the typography and norms you want applied site-wide, like box-sizing */
-
-3. Base/
-
-
-/*  4. store BEM blocks that are more self-contained, such as buttons */
-
-4. Components/
-
-
-/*  5. store BEM blocks which contain things that can be reused, such as a form or header for large layouts */
-
-5. Layouts/
-
-
-/* 6. contains blocks of code/rules specific to a single page and won't be reused elsewhere */
-
-6. Pages/
-
-
-/*  7. store thematic code, such as custom styling for Christmas or Halloween */
-
-7. Themes/
-
+.menu-container
+.entree-box
+.menu-header 
+.entree-head      
+.menu-btn 
+.entree-btn 
+.entree1.1
+.entree1.2
+.entree1.3
+.main-box
+.main-head
+.main-btn
+.main1.1
+.main1.2
+.main1.3
+.dessert-box
+.desserts-head
+.dessert-btn 
+.dessert1.1
+.dessert1.2 
+.dessert1.3
+.menu-text
+.menu-text h2
+.menu-text p
+.price
+.add-me
 
