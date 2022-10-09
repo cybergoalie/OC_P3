@@ -266,7 +266,8 @@ font-size: 18px;
 text-align: center;
 font-weight: 400;
 }
-/* offset-x | offset-y | blur-radius | spread-radius | color */
+
+/* box-shadow parameters= offset-x | offset-y | blur-radius | spread-radius | color */
 .explore-btn {
 border: none;
 box-shadow: 0 4px 8px 0px rgba(0, 0, 0, .2);
@@ -473,28 +474,25 @@ border-bottom-right-radius: 0;
     color: black;
     justify-content: space-between;
     align-items: center;
-padding: 20px 10px 15px 10px;
+    padding: 20px 10px 15px 10px;
 }
 
 .rest-text {
-margin-left: 10px;
+    margin-left: 10px;
 
 }
 
 .rest-text h3 {
-font-weight: 700;
-font-size: 20px;
-
+    font-weight: 700;
+    font-size: 20px;
 }
 
 .rest-text p {
-padding-top: 5px;
+    padding-top: 5px;
 }
 
 
-
-
-/* added the following to get the heart to fill on click... ask Muntasim to help understand all these commands */
+/* get the heart to fill on click */
 :root {
     --stroke-width: 2px;
     --heart-height: 35px;
@@ -513,9 +511,9 @@ padding-top: 5px;
     clip-path: url(#svgClip);
     margin-top: -5px;
     margin-right: 5%;
- }
+}
  
- .heart-clip {
+.heart-clip {
     appearance: none;
     margin: 0px;
     top: 0;
@@ -527,28 +525,28 @@ padding-top: 5px;
     z-index: 2;
     cursor: pointer;
     border: 3px solid black;
- }
+}
 
- .heart-container:hover {
+.heart-container:hover {
+    
     background-color: rgb(231, 224, 224);
     transition: ease 1s;
-    
- }
+}
  
- .heart-clip + .fill {
+.heart-clip + .fill {
     top:0;
     left:0;
     transform: translateY(50%);
     width: calc(2 * var(--heart-width, 100px));
     aspect-ratio: 1/1;
     transition: transform var(--transition-length, 0s) cubic-bezier(.2, .6, .8, .4);
- }
+}
    
- .heart-clip:checked + .fill {
+.heart-clip:checked + .fill {
     transform: translateY(0);
- }
+}
  
- .heart-stroke {
+.heart-stroke {
     width: calc(100% - (2 * var(--stroke-width, 2px)));
     aspect-ratio: 1/1;
     position: absolute;
@@ -557,17 +555,17 @@ padding-top: 5px;
     fill: transparent;;
     stroke: var(--heart-color);
     stroke-width: var(--stroke-width, 1px);
- }
+}
  
- .waveShape {
+.waveShape {
     animation-name: waveAction;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-duration: 1s;
     fill: var(--heart-color);
- }
+}
  
- @keyframes waveAction {
+@keyframes waveAction {
     0% {
        transform: translate(-175px, 0px);
     }
@@ -604,7 +602,6 @@ padding-top: 5px;
     background-color: black;
     justify-content: flex-start;
     padding: 30px;
-
 }
 
 .footer-logo {
@@ -689,10 +686,9 @@ padding-top: 5px;
 
 .rest-nav-logo {
 
-margin-right: 15%;
-width: 65%;
-padding: 20px;
-
+    margin-right: 15%;
+    width: 65%;
+    padding: 20px;
 }
 
 /* NAV ENDS */
@@ -703,8 +699,7 @@ padding: 20px;
     width: 100%;
     height: auto;
     position: relative;
-    text-align: left;
-   
+    text-align: left;   
 }
 /* unique page header container properties */
 
@@ -737,8 +732,8 @@ padding: 20px;
     font-size: 6vw;
 }
 
-.restpg-textbar h1 {
-
+.restpg-textbar h3 {
+max-width: 85%;
 }
 
 .rest1textbar {
@@ -751,8 +746,11 @@ padding: 20px;
 
 .menu-container {
 
-    background-color:#e7e3e6;;
-    padding-left: 25px;
+    background-color:#e7e3e6;
+}
+
+.menu-box {
+    padding-top: 30px;
 }
 
 .menu-header {
@@ -760,6 +758,7 @@ padding: 20px;
     line-height: 1.2em;
     padding-bottom: 10px;
     margin-bottom: 10px;
+    margin-left: 25px;
 }
 /* the above and below blocks achieve the partial underline */
 
@@ -771,126 +770,229 @@ padding: 20px;
     width: 50px;
     content: '';
     border-top: 3px solid #99E2D0;
-  }
-
-  .entree-box {
-width: 100%;
-padding-bottom: 10px;
-  }
-  
-  .entree-head {
-
-  }   
-.menu-btn-container {
-padding: 10px;    
-
 }
+
+.entree-box {
+    width: 100%;
+    padding-bottom: 10px;
+}
+  
+.entree-head {
+
+}   
+
+.menu-btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
 .menu-btn {
-width: 100%;
-display: flex;
-justify-content: space-between;
-transition: 1s;
-  }
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 10px;
+    background-color: white;
+    height: auto;
+    border: none;  
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0px rgba(0, 0, 0, .2);
+    cursor: pointer;
+    transition: all 3s ease;
+    
+}
 
-.menu-btn:hover + .addme {
-display: inline-flex;
 
-  }
+.menu-text {
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    flex: 1;
+    min-width: 0;
+}
+
+.menu-text h2 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space:nowrap;
+   
+}
+
+.menu-text p {
+    padding-top: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space:nowrap;
+   
+}
+
+.price {
+    font-weight: bold;
+    font-size: 16px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    flex-shrink: 0;
+}
+.check-wrapper {
+   background-color: #99E2D0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: none;
+    
+    width: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    
+        right: -100px;
+       
+        -webkit-animation: slide 0.5s forwards;
+        -webkit-animation-delay: 2s;
+        animation: slide 0.5s forwards;
+        animation-delay: 2s;
+}
+    
+    @-webkit-keyframes slide {
+        100% { right: 0; }
+    }
+    
+    @keyframes slide {
+        100% { right: 0; }
+    }
+
+  
+
+/*how to get the flex element .check-wrapper to slide into view from right to left regardless of what its child container (i.add-me) is doing inside it*/
+/*translate: scaleX() something or make it an animation with transition checkpoints */
+
+
+
+
+
+
+
+
+
+
+
+
+
+i.add-me {
+    height: auto;
+    padding: 13px;
+    border-radius: 50%;
+    display: none;
+    background-color: white;
+    border: 2px solid black;
+    margin: 10px 0px;
+    flex-shrink: 0;
+    animation: spin 1s linear;
+    animation iteration-count: 1;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.menu-btn:hover i.add-me {
+    display: flex;
+}
+
+.menu-btn:hover .check-wrapper {
+    display: flex;
+    
+}
+
 
 
 .entree-btns {
 
 }
+
 .entree-btn {
 
-  }
+}
+
 .entree1.1 {
 
-  }
+}
+
 .entree1.2 {
 
-  }
+}
+
 .entree1.3 {
 
-  }
-.main-box {
-padding-bottom: 10px;
+}
 
+.main-box {
+    padding-bottom: 10px;
 }
 
 .main-head {
 
-  }
+}
 
 .main-btns {
 
-  }
+}
 
 .main-btn {
 
-  }
+}
   
 .main1.1 {
 
-  }
+}
   
 .main1.2 {
 
-  }
-  .main1.3 {
+}
+  
+.main1.3 {
 
-  }
+}
   
 .dessert-box {
-padding-bottom: 10px;
-  }
+    padding-bottom: 10px;
+}
 
 .desserts-head {
 
-  }
+}
 
 .dessert-btns {
 
-  }
+}
   
 .dessert-btn {
 
-  } 
+} 
 
 .dessert1.1 {
 
-  }
+}
 
 
 .dessert1.2 {
 
-  } 
+} 
   
 .dessert1.3 {
 
-  }
-
-.menu-text {
-margin-left: 10px;
-  }
-
-.menu-text h2 {
-
-  }
-
-.menu-text p {
-
-  }
-
-.price {
-
-  }
-
-.add-me {
-
-    display: none;
-
 }
+
+
 
 /* END MENU SECTION */
 
@@ -905,7 +1007,7 @@ margin-left: 10px;
     display: flex;
     justify-content: center;
     background-color: #e7e3e6;
-    width: 100%
+    width: 100%;
 }
 
 .order-btn {
@@ -920,6 +1022,7 @@ margin-left: 10px;
     background: linear-gradient(0deg, rgba(147,86,220,1) 21%, rgba(255,121,218,1) 100%, rgba(147,86,220,1) 100%);
     cursor: pointer;
     transition: ease 1s;
+    width: 65%;
 }
 
 
