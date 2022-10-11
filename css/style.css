@@ -847,17 +847,29 @@ max-width: 85%;
     align-items: center;
     justify-content: center;
     display: none;
+
+    overflow: hidden;
     
         right: -100px;
        
-        -webkit-animation: slide 0.5s forwards;
-        -webkit-animation-delay: 2s;
-        animation: slide 0.5s forwards;
-        animation-delay: 2s;
+        -webkit-animation: 3s forwards 2s 1 slide;
+        animation: 3s forwards 2s 1 slide ;
 }
     
+/*animation shorthand = animation-duration;  animation-iteration-count; animation-direction (); animation-name; */
+/* @keyframes duration | easing-function | delay |
+iteration-count | direction | fill-mode | play-state | name ...for example,
+animation: 3s ease-in 1s 2 reverse both paused slidein; */
+
+/* @keyframes duration | easing-function | delay | name ...for example,
+animation: 3s linear 1s slidein */
+
+/* two animations... for example,
+animation: 3s linear slidein, 3s ease-out 5s slideout */
+
+
     @-webkit-keyframes slide {
-        100% { right: 0; }
+        0% { right: -100; }
     }
     
     @keyframes slide {
