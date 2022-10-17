@@ -22,7 +22,7 @@
   <body>
         
     <div id="loading-wrapper">
-        <div id="hideMe">
+        <div id="loader">
             <div class="lds-default"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
         </div>
     </div>
@@ -35,140 +35,118 @@
             <img class="rest-nav-logo" src="images/logo/ohmyfood.png" alt="site logo">
         </nav>
 
-        <div class="rest-header rest1header">
+        <div class="rest-header">
                     
             <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt=""Mediterranean feast" class="restpg-img rest2img">
-            <div class="restpg-textbar rest1textbar">
+            <div class="restpg-textbar">
         
                 <h3>The Enchanted Plate</h3>
-                
-                <svg height="0" width="0">
-                    <defs>
-                        <clipPath id=svgClip clipPathUnits="objectBoundingBox" transform="scale(0.01 0.01)">
-                            <path d='M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z'>     
-                        </clipPath>
-                    </defs>
-                </svg>
-                
-                <div class="heart-container">
-                    <svg viewBox="0 0 100 100" class='heart-stroke'>
-                        <path d="M10,30 A20,20,0,0,1,50,30 A20,20,0,0,1,90,30 Q90,60,50,90 Q10,60,10,30 Z" />    
-                    </svg>
-                
-                    <input type='checkbox' class='heart-clip'>
-                    <div class="fill">
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                            viewBox="0 0 400 400" xml:space="preserve">
-                                <path d="M0,6c100,10,100,-10,200,0c100,10,100,-10,200,0v394h-400Z" class="waveShape"></path>
-                        </svg>
-                    </div>
-                </div>
+                <div class="heart"><i class="fa-solid fa-heart"></i></div>
             </div>
         </div>
     </header>        
     <!-- REST HEADER ENDS -->
     <!-- MENU BEGINS -->
     <section class="menu-container">
-        <div class="menu-box entree-box">
-            <div class="menu-header entree-head">ENTREES</div>
-            <div class="menu-btn-container entree-btns">
-                <button class="menu-btn entree-btn entree2.1">
+        <ul class="menu-box">
+            <li class="menu-header">ENTREES</li>
+                <li class="menu-btn">
                     <div class="menu-text">
                         <h2>Foie Gras Ravioli</h2>
                         <p>With truffle cream</p>
                     </div>
                     <div class="price">&#x20AC;25</div>
-                    <div class=check-wrapper><i class="add-me fa-solid fa-check"></i></div>
-                </button>
-                <button class="menu-btn entree-btn entree2.2">
+                    <div class=check-wrapper><i class="fa-solid fa-check"></i></div>
+                </li>
+                <li class="menu-btn">
                     <div class="menu-text">
                         <h2>Oscietra Caviar</h2>
                         <p>With buckwheat blinis</p>
                     </div>
                     <div class="price">&#x20AC;35</div>
-                    <div class=check-wrapper><i class="add-me fa-solid fa-check"></i></div>
-                </button>
-                <button class="menu-btn entree-btn entree2.3">
+                    <div class=check-wrapper><i class="fa-solid fa-check"></i></div>
+                </li>
+                <li class="menu-btn">
                     <div class="menu-text">
                         <h2>Lobster and Leek Foam</h2>
                         <p>Marinated with orange zest</p>
                     </div>
                     <div class="price">&#x20AC;20</div>
-                    <div class=check-wrapper><i class="add-me fa-solid fa-check"></i></div>
-                </button>
-                <button class="menu-btn entree-btn entree2.3">
+                    <div class=check-wrapper><i class="fa-solid fa-check"></i></div>
+                </li>
+                <li class="menu-btn">
                     <div class="menu-text">
                         <h2>Duck Foie Gras</h2>
                         <p>With fig jam and grilled baguette</p>
                     </div>
                     <div class="price">&#x20AC;35</div>
-                    <div class=check-wrapper><i class="add-me fa-solid fa-check"></i></div>
-                </button>
-            </div>
-        </div>
+                    <div class=check-wrapper><i class="fa-solid fa-check"></i></div>
+                </li>
+        </ul>
         
-        <div class="menu-box main-box">
-            <div class="menu-header main-head">MAIN DISH</div>
-            <div class="menu-btn-container main-btns">
-                <button class="menu-btn main-btn main2.1">
+        
+        <ul class="menu-box">
+            <li class="menu-header">MAIN DISH</li>
+            
+                <li class="menu-btn">
                     <div class="menu-text">
                         <h2>Fresh Buttered Scallops</h2>
                         <p>With white celery puree</p>
                     </div>
                     <div class="price">&#x20AC;40</div>
-                    <div class=check-wrapper><i class="add-me fa-solid fa-check"></i></div>
-                </button>
-                <button class="menu-btn main-btn main2.2">
+                    <div class=check-wrapper><i class="fa-solid fa-check"></i></div>
+                </li>
+                <li class="menu-btn">
                     <div class="menu-text">
                         <h2>Pan-Fried Lobster</h2>
                         <p>With mashed sweet potatoes</p>
                     </div>
                     <div class="price">&#x20AC;35</div>
-                    <div class=check-wrapper><i class="add-me fa-solid fa-check"></i></div>
-                </button>
-                <button class="menu-btn main-btn main2.3">
+                    <div class=check-wrapper><i class="fa-solid fa-check"></i></div>
+                </li>
+                <li class="menu-btn">
                     <div class="menu-text">
                         <h2>Braised Ox Tail</h2>
                         <p>With wild rice and lemon zest</p>
                     </div>
                     <div class="price">&#x20AC;44</div>
-                    <div class=check-wrapper><i class="add-me fa-solid fa-check"></i></div>
-                </button>
-            </div>
-        </div>
-        <div class="menu-box dessert-box">
-            <div class="menu-header desserts-head">DESSERTS</div>
-            <div class="menu-btn-container dessert-btns">
-                <button class="menu-btn dessert-btn dessert2.1">
+                    <div class=check-wrapper><i class="fa-solid fa-check"></i></div>
+                </li>
+            </ul>
+        
+        <ul class="menu-box">
+            <li class="menu-header">DESSERTS</li>
+            
+                <li class="menu-btn">
                     <div class="menu-text">
                         <h2>Chocolate and Hazelnut Macaroon</h2>
                         <p>With caramel butter ice cream</p>
                     </div>
                     <div class="price">&#x20AC;18</div>
-                    <div class=check-wrapper><i class="add-me fa-solid fa-check"></i></div>
-                </button>
-                <button class="menu-btn dessert-btn dessert2.2">
+                    <div class=check-wrapper><i class="fa-solid fa-check"></i></div>
+                </li>
+                <li class="menu-btn">
                     <div class="menu-text">
                         <h2>Baba au rhum</h2>
                         <p>With lemon drizzle</p>
                     </div>
                     <div class="price">&#x20AC;22</div>
-                    <div class=check-wrapper><i class="add-me fa-solid fa-check"></i></div>
-                </button>
-                <button class="menu-btn dessert-btn dessert2.3">
+                    <div class=check-wrapper><i class="fa-solid fa-check"></i></div>
+                </li>
+                <li class="menu-btn">
                     <div class="menu-text">
                         <h2>Lemon Meringue Pie</h2>
                         <p>Destructured</p>
                     </div>
                     <div class="price">&#x20AC;23</div>
-                    <div class=check-wrapper><i class="add-me fa-solid fa-check"></i></div>
-                </button>
-            </div>
-        </div>
+                    <div class=check-wrapper><i class="fa-solid fa-check"></i></div>
+                </li>
+            </ul>
+        
     </section>
     <section class="order-section">
         <div class="order-box">
-            <button type="button" class="btn order-btn">Order</button> 
+            <div class="btn order-btn">Order</div> 
         </div>
     </section>
 </main>

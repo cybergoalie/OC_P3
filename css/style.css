@@ -16,6 +16,15 @@ html, body {
     padding: 0;
 }
 
+/* target the body and put in the center of the page */
+body header, main {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+/* LOADING ANIMATION BEGINS */
+
 #loading-wrapper {
     -moz-animation: loadAnimation 0s ease-in 1.3s forwards;
     /* Firefox */
@@ -53,131 +62,113 @@ html, body {
 
 }
 
-#hideMe {
-    -moz-animation: cssAnimation 0s ease-in 5s forwards;
-    /* Firefox */
-    -webkit-animation: cssAnimation 0s ease-in 5s forwards;
-    /* Safari and Chrome */
-    -o-animation: cssAnimation 0s ease-in 5s forwards;
-    /* Opera */
-    animation: cssAnimation 0s ease-in 5s forwards;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-}
-@keyframes cssAnimation {
-    to {
-        width:0;
-        height:0;
-        overflow:hidden;
-    }
-}
-@-webkit-keyframes cssAnimation {
-    to {
-        width:0;
-        height:0;
-        visibility:hidden;
-    }
-}
-
-
-.hideme {
-
+.loader {
     justify-content: center;
     align-content: center;
     display: flex;
     padding: 10px;
 }
 
-
 .lds-default {
     display: inline-block;
     position: relative;
     width: 80px;
     height: 80px;
-    
-  }
-  .lds-default div {
+}
+
+.lds-default div {
     position: absolute;
     width: 6px;
     height: 6px;
     background: black;
     border-radius: 50%;
     animation: lds-default 1.2s linear infinite;
-  }
-  .lds-default div:nth-child(1) {
+}
+  
+.lds-default div:nth-child(1) {
     animation-delay: 0s;
     top: 37px;
     left: 66px;
-  }
-  .lds-default div:nth-child(2) {
+}
+  
+.lds-default div:nth-child(2) {
     animation-delay: -0.1s;
     top: 22px;
     left: 62px;
-  }
-  .lds-default div:nth-child(3) {
+}
+  
+.lds-default div:nth-child(3) {
     animation-delay: -0.2s;
     top: 11px;
     left: 52px;
-  }
-  .lds-default div:nth-child(4) {
+}
+  
+.lds-default div:nth-child(4) {
     animation-delay: -0.3s;
     top: 7px;
     left: 37px;
-  }
-  .lds-default div:nth-child(5) {
+}
+  
+.lds-default div:nth-child(5) {
     animation-delay: -0.4s;
     top: 11px;
     left: 22px;
-  }
-  .lds-default div:nth-child(6) {
+}
+  
+.lds-default div:nth-child(6) {
     animation-delay: -0.5s;
     top: 22px;
     left: 11px;
-  }
-  .lds-default div:nth-child(7) {
+}
+  
+.lds-default div:nth-child(7) {
     animation-delay: -0.6s;
     top: 37px;
     left: 7px;
-  }
-  .lds-default div:nth-child(8) {
+}
+  
+.lds-default div:nth-child(8) {
     animation-delay: -0.7s;
     top: 52px;
     left: 11px;
-  }
-  .lds-default div:nth-child(9) {
+}
+  
+.lds-default div:nth-child(9) {
     animation-delay: -0.8s;
     top: 62px;
     left: 22px;
-  }
-  .lds-default div:nth-child(10) {
+}
+  
+.lds-default div:nth-child(10) {
     animation-delay: -0.9s;
     top: 66px;
     left: 37px;
-  }
-  .lds-default div:nth-child(11) {
+}
+  
+.lds-default div:nth-child(11) {
     animation-delay: -1s;
     top: 62px;
     left: 52px;
-  }
-  .lds-default div:nth-child(12) {
+}
+  
+.lds-default div:nth-child(12) {
     animation-delay: -1.1s;
     top: 52px;
     left: 62px;
-  }
-  @keyframes lds-default {
+}
+
+@keyframes lds-default {
     0%, 20%, 80%, 100% {
       transform: scale(1);
     }
     50% {
       transform: scale(1.5);
     }
-  }
-/* target the body and put in the center of the page */
-body header, main {
-    width: 100%;
-    margin: 0 auto;
-    background-color: #fff;
 }
+
+/* LOADING ANIMATION ENDS */
+
+/* NAVIGATION SECTION BEGINS */
 
 .main-nav {
     display: flex;
@@ -185,21 +176,15 @@ body header, main {
     justify-content: center;
     align-items: center;
     justify-content: space-between;
-
 }
 
-.logo {
+.main-nav img {
     padding: 25px 0px 20px 0px;
     width: 60%;
  
 }
 
-.logo img {
-width: 100%;
-}
-
-
-.nav-link {
+.main-nav div {
     width: 100%;
     padding: 20px 0px;
     font-weight: bold;
@@ -209,85 +194,80 @@ width: 100%;
     align-items: center;
 }
 
-.navlink-icon {
-height: 100%;
-}
-
-.location-form {
+.search-form {
     text-decoration: none;
     color: black;
-        margin-left: 5px;
-        font-size: 18px;
-        font-weight: 500;
-        background-color: rgba(128, 128, 128, 0.027);
-        border: none;
-        border-radius: 20px;
-        padding-left: 10px;
-        width: 41%;
-        outline: none;
+    margin-left: 5px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: rgba(128, 128, 128, 0.027);
+    border: none;
+    border-radius: 20px;
+    padding-left: 10px;
+    width: 41%;
+    outline: none;
 
 }
-/*apply hover effects to menu options*/
-.location-form--active {
+
+.search-form--active {
     border: none;
-    
 }
-.location-form::placeholder {
+
+.search-form::placeholder {
     font-color: black;
-  font-weight: 700;
-  font-family: Roboto;
-  font-size: 16px;
-  align-text: center;
+    font-weight: 700;
+    font-family: Roboto;
+    font-size: 16px;
+    align-text: center;
 }
 
 
 
 /* Quick Search Container Begins */
 
-.quick-search-container {
+.quick-search {
     display: flex;
     width: 100%; 
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-background-color: #d8d5d752;
+    background-color: #d8d5d752;
 }
 
-.quick-search-headline {
+.quick-search h1 {
     margin-top: 10px;
-padding: 30px;
-text-align: center;
+    padding: 30px;
+    text-align: center;
 }
 
-.quick-search-subtitle {
-width: 85%;
-padding: 10px;
-font-size: 18px;
-text-align: center;
-font-weight: 400;
+.quick-search p {
+    width: 85%;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 400;
 }
 
 /* box-shadow parameters= offset-x | offset-y | blur-radius | spread-radius | color */
-.explore-btn {
-border: none;
-box-shadow: 0 4px 8px 0px rgba(0, 0, 0, .2);
-color: white;
-padding: 15px 30px;
-margin-bottom: 50px;
-margin-top: 30px;
-font-size: 18px;
-border-radius: 30px;
-background: linear-gradient(0deg, rgba(147,86,220,1) 21%, rgba(255,121,218,1) 100%, rgba(147,86,220,1) 100%);
-cursor: pointer;
- transition: ease 1s;
- max-width: 65%;
-
+.quick-search div {
+    border: none;
+    box-shadow: 0 4px 8px 0px rgba(0, 0, 0, .2);
+    color: white;
+    padding: 15px 30px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    background: linear-gradient(0deg, rgba(147,86,220,1)21%, rgba(255,121,218,1)100%, rgba(147,86,220,1) 100%);
+    cursor: pointer;
+    transition: ease 1s;
+    max-width: 65%;
+    text-align: center;
 }
 
 .explore-btn:hover {
     box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, .3);
     transform: scale(1.2);
-   
 }
 
 /* Quick Search Container Ends */
@@ -296,13 +276,13 @@ cursor: pointer;
 
 .process-section {
     display: flex;
-    width: 100%; 
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+    align-content: center;
 }
 
-.process-headline {
+.process-section h3 {
     font-size: 20px;
     width: 100%;
     margin: 30px 0px;
@@ -314,15 +294,16 @@ cursor: pointer;
     display: flex;
     flex-wrap: wrap;
     width: 100%; 
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+   
 }
 
 .process-btn {
     display: flex;
-    flex-direction: row;
+    
     justify-content: flex-start;
-    width: 100%;
     height: 100px;
     align-items: center;
     border: none;
@@ -332,6 +313,7 @@ cursor: pointer;
     background-color: #d8d5d752;
     cursor: pointer;
     transition: ease;
+    
 }
 
 .process-btn:hover {
@@ -339,41 +321,36 @@ cursor: pointer;
 
 }
 
-.process-btn:hover .process-btn-icon {
+.process-btn:hover i {
     color: #9356dc;
-    
 }
 
 .componentWrapper {
     border: none;
     border-radius: 40px;
-    width: 80%;
     margin-bottom: 50px;
+    width: 81%;
 }
   
-.componentWrapper .how-to-step {
+.process-label {
     position:absolute;
     margin-left:-15px;
     margin-top: 38px;
     color:white;
     background: #9356dc;
     font-size: 18px;
-    border-radius:50%;
-    padding:2px 10px;
-    
+    border-radius: 50%;
+    padding: 2px 10px;  
 }
 
 
-.process-btn-icon {
-
+.process-btn i {
     margin-right: 30px;
     margin-left: 20px;
     font-size: 20px;
 }
 
-
-
-.process-btn-text {
+.process-btn span {
     font-size: 18px;
     font-weight: bold;
     text-align: left;
@@ -381,7 +358,7 @@ cursor: pointer;
 
 /* PROCESS SECTION ENDS */
 
-/* RESTAURANT SECTION BEGINS */
+/* MAIN (INDEX) RESTAURANT SECTION BEGINS */
 
 .rest-section-container {
     background-color: #d8d5d752;
@@ -405,13 +382,16 @@ cursor: pointer;
     width: 100%; 
     flex-direction: column;
     justify-content: space-evenly;
-    align-content: center;
+    align-items: center;
     height: auto;
+}
+.rest {
+    width: 100%;
 }
 
 .new-rest-wrapper {
+
     position: relative;
-    text-align: left;
     color: rgb(126, 206, 226);
     width: 100%;
 }
@@ -442,30 +422,28 @@ cursor: pointer;
     margin: 30px;
     text-decoration: none;
     position: relative;
-    transition: ease 1s;
+    transition: ease .5s;
 }
 
 
 .rest-card:hover {
     box-shadow: 0 0 8px 1px rgba(0, 0, 0, .5);
-    transform: scale(1.03);
+    transform: scale(1.01);
 }
 
 .rest-card:active {
     color: black;
 }
 
-.rest-card-1 {
-    margin-top: 20px;
-}
+
 
 .rest-img {
-height: 75%;
-width: 100%;
-object-fit: cover;
-border-radius: 15px;
-border-bottom-left-radius: 0px;
-border-bottom-right-radius: 0;
+    height: 75%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0;
 }
 
 .rest-textbar {
@@ -492,103 +470,26 @@ border-bottom-right-radius: 0;
 }
 
 
-/* get the heart to fill on click */
-:root {
-    --stroke-width: 2px;
-    --heart-height: 35px;
-    --heart-width: 35px;
-    --transition-length: 1.2s;
-    --heart-color: #9356dc;
-     
+.heart:hover i{
+    opacity: 100%;
+    color: #9356dc;
+    transition: all 1s linear;
+    text-shadow: -1px 0 #9356dc, 0 1px #9356dc, 1px 0 #9356dc, 0 -1px #9356dc;
 }
- 
-.heart-container {
-    height: 35px;
-    position: relative;
-    width: var(--heart-width, 100px);
-    aspect-ratio: 1/1;
-    overflow: hidden;
-    clip-path: url(#svgClip);
-    margin-top: -5px;
-    margin-right: 5%;
-}
- 
-.heart-clip {
-    appearance: none;
-    margin: 0px;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: absolute;
-    overflow: hidden;
-    z-index: 2;
+
+.heart i {
+    font-size: 24px;
+    color: white;
+    opacity: .8;
     cursor: pointer;
-    border: 3px solid black;
-}
-
-.heart-container:hover {
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
     
-    background-color: rgb(231, 224, 224);
-    transition: ease 1s;
 }
- 
-.heart-clip + .fill {
-    top:0;
-    left:0;
-    transform: translateY(50%);
-    width: calc(2 * var(--heart-width, 100px));
-    aspect-ratio: 1/1;
-    transition: transform var(--transition-length, 0s) cubic-bezier(.2, .6, .8, .4);
+.heart {
+margin-right: 5%;
 }
-   
-.heart-clip:checked + .fill {
-    transform: translateY(0);
-}
- 
-.heart-stroke {
-    width: calc(100% - (2 * var(--stroke-width, 2px)));
-    aspect-ratio: 1/1;
-    position: absolute;
-    top: var(--stroke-width, 0);
-    left: var(--stroke-width, 0);
-    fill: transparent;;
-    stroke: var(--heart-color);
-    stroke-width: var(--stroke-width, 1px);
-}
- 
-.waveShape {
-    animation-name: waveAction;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-duration: 1s;
-    fill: var(--heart-color);
-}
- 
-@keyframes waveAction {
-    0% {
-       transform: translate(-175px, 0px);
-    }
-    100% {
-       transform: translate(0px, 0px);
-    }
- }
-
-.rest-card-1 {
-
-}
-
-.rest-card-2 {
-
-}
-
-.rest-card-3 {
-
-}
-
-.rest-card-4 {
-
-}
+/* background is shorthand to combine color, image and background image properties; 
+eg. background: #ffffff url("img_tree.png") no-repeat right top /*
 
 /* RESTAURANT SECTION ENDS */
 
@@ -604,13 +505,12 @@ border-bottom-right-radius: 0;
     padding: 30px;
 }
 
-.footer-logo {
+.footer-section img {
     filter: -webkit-filter: invert(1); 
     filter: invert(1);
     width: 33%;
 }
-
-.footer-link-container {
+.footer-section div {
     padding-top: 15px;
     padding-bottom: 10px;
     margin-bottom: 10px;
@@ -621,47 +521,15 @@ border-bottom-right-radius: 0;
 }
 
 .footer-link {
-   
     margin-top: 15px;
+   color: white;
+    text-decoration: none;
+    display: inline;
 /* not sure why, but placing color:white and text-decor:none here did nothing to affect my site */
 }
 
-.suggest-link {
-    color: white;
-    text-decoration: none;
-    display: inline;
-}
 
-.suggest-icon {
-    font-size: 12px;
-}
 
-.suggest-text {
-    padding-left: 8px;
-}
-
-.partner-link {
-    color: white;
-    text-decoration: none;
-}
-
-.partner-icon {
-    font-size: 12px;
-}
-
-.partner-text {
-    padding-left: 8px;
-}
-
-.legal-link {
-    color: white;
-    text-decoration: none;
-}
-
-.contact-link {
-    color: white;
-    text-decoration: none;
-}
 
 /* FOOTER ENDS */
 
@@ -685,7 +553,6 @@ border-bottom-right-radius: 0;
 }
 
 .rest-nav-logo {
-
     margin-right: 15%;
     width: 65%;
     padding: 20px;
@@ -703,19 +570,11 @@ border-bottom-right-radius: 0;
 }
 /* unique page header container properties */
 
-.rest1header {
-
-}   
-
 .restpg-img {
     width: 100%;
     object-fit: cover;
     height: 350px;
 } 
-
-.rest1img {
-
-}
 
 .restpg-textbar {
     position: absolute;
@@ -733,12 +592,10 @@ border-bottom-right-radius: 0;
 }
 
 .restpg-textbar h3 {
-max-width: 85%;
+    max-width: 85%;
 }
 
-.rest1textbar {
 
-}
 
 /*END OF REST.PAGE HEADER STYLE*
 
@@ -747,10 +604,52 @@ max-width: 85%;
 .menu-container {
 
     background-color:#e7e3e6;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;   
+    justify-content: center; 
+  }
+  
+
+
+
+.menu-container li {
+    opacity: .41;
+    transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    margin: 10px;
 }
 
-.menu-box {
+.menu-container:hover li {
+    opacity: 1;  
+    margin-bottom: 1%;
+}
+
+.menu-container:hover li:nth-child(2n) {
+    transition-delay: .1s;
+}
+
+.menu-container:hover li:nth-child(3n) {
+    transition-delay: .2s;
+}
+ 
+.menu-container:hover li:nth-child(4n) {
+    transition-delay: .3s;
+}
+
+ul {
     padding-top: 30px;
+    padding-bottom: 10px;
+    list-style: none;
+    width: 96%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
 }
 
 .menu-header {
@@ -772,38 +671,19 @@ max-width: 85%;
     border-top: 3px solid #99E2D0;
 }
 
-.entree-box {
-    width: 100%;
-    padding-bottom: 10px;
-}
-  
-.entree-head {
-
-}   
-
-.menu-btn-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;    
-}
-
 .menu-btn {
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     margin: 10px;
     background-color: white;
-    height: auto;
+    height: 80px;
     border: none;  
     border-radius: 15px;
     box-shadow: 0 4px 8px 0px rgba(0, 0, 0, .2);
-    cursor: pointer;
-    transition: all 3s ease;
-    
+    cursor: pointer;   
 }
-
-
 .menu-text {
     text-align: left;
     padding-top: 10px;
@@ -817,7 +697,6 @@ max-width: 85%;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space:nowrap;
-   
 }
 
 .menu-text p {
@@ -825,7 +704,6 @@ max-width: 85%;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space:nowrap;
-   
 }
 
 .price {
@@ -835,71 +713,28 @@ max-width: 85%;
     padding-bottom: 10px;
     flex-shrink: 0;
 }
+
 .check-wrapper {
    background-color: #99E2D0;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     border: none;
-    
-    width: 100px;
-    height: 100%;
-    display: flex;
+    color: #99e2d0;
+    width: 0px;
+    min-height: 100%;
+    overflow: hidden;
     align-items: center;
     justify-content: center;
-    display: none;
-
-    overflow: hidden;
-    
-        right: -100px;
-       
-        -webkit-animation: 3s forwards 2s 1 slide;
-        animation: 3s forwards 2s 1 slide ;
+    display: flex;
 }
-    
-/*animation shorthand = animation-duration;  animation-iteration-count; animation-direction (); animation-name; */
-/* @keyframes duration | easing-function | delay |
-iteration-count | direction | fill-mode | play-state | name ...for example,
-animation: 3s ease-in 1s 2 reverse both paused slidein; */
 
-/* @keyframes duration | easing-function | delay | name ...for example,
-animation: 3s linear 1s slidein */
-
-/* two animations... for example,
-animation: 3s linear slidein, 3s ease-out 5s slideout */
-
-
-    @-webkit-keyframes slide {
-        0% { right: -100; }
-    }
-    
-    @keyframes slide {
-        100% { right: 0; }
-    }
-
-  
-
-/*how to get the flex element .check-wrapper to slide into view from right to left regardless of what its child container (i.add-me) is doing inside it*/
-/*translate: scaleX() something or make it an animation with transition checkpoints */
-
-
-
-
-
-
-
-
-
-
-
-
-
-i.add-me {
+.check-wrapper i {
     height: auto;
     padding: 13px;
     border-radius: 50%;
     display: none;
     background-color: white;
-    border: 2px solid black;
+    border: none;
     margin: 10px 0px;
     flex-shrink: 0;
     animation: spin 1s linear;
@@ -915,97 +750,20 @@ i.add-me {
     }
 }
 
-
-.menu-btn:hover i.add-me {
+.menu-btn:hover .check-wrapper i {
     display: flex;
+}
+
+.menu-btn:hover .price {
+    margin-right: 15px;
+    transition: margin-right 1.5s;
 }
 
 .menu-btn:hover .check-wrapper {
-    display: flex;
+    width: 100px;
+    transition: width 1.5s;
     
 }
-
-
-
-.entree-btns {
-
-}
-
-.entree-btn {
-
-}
-
-.entree1.1 {
-
-}
-
-.entree1.2 {
-
-}
-
-.entree1.3 {
-
-}
-
-.main-box {
-    padding-bottom: 10px;
-}
-
-.main-head {
-
-}
-
-.main-btns {
-
-}
-
-.main-btn {
-
-}
-  
-.main1.1 {
-
-}
-  
-.main1.2 {
-
-}
-  
-.main1.3 {
-
-}
-  
-.dessert-box {
-    padding-bottom: 10px;
-}
-
-.desserts-head {
-
-}
-
-.dessert-btns {
-
-}
-  
-.dessert-btn {
-
-} 
-
-.dessert1.1 {
-
-}
-
-
-.dessert1.2 {
-
-} 
-  
-.dessert1.3 {
-
-}
-
-
-
 /* END MENU SECTION */
 
 
@@ -1037,31 +795,60 @@ i.add-me {
     width: 65%;
 }
 
-
 /* offset-x | offset-y | blur-radius | spread-radius | color */
-
 
 .order-btn:hover {
     box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, .3);
     transform: scale(1.2);
-   
 }
-
 
 /* EXTRA PAGES STYLE ENDS */
 
+/* STYLE FOR lARGE SCREEN */
 
-
-/* STYLE FOR lARGE TABLET SCREEN */
-
-@media only screen and (min-width: 769px) and (max-width: 992px) {
-
-}
-
-/*  STYLE FOR SMALL TABLET SCREEN */
-
-@media only screen and (min-width: 415px) and (max-width: 768px) {
-
-}
+@media only screen and (min-width: 769px) {
    
- 
+.componentWrapper {
+width: 30%;
+}
+
+   .process-section {
+     height: 300px;
+
+   }
+   
+   .process-btn-container {
+    
+
+      flex-direction: row;
+      justify-content: space-around;
+      margin-left: 10px;
+        
+    }
+    
+.process-headline {
+    width: auto;
+    padding: 0;
+    font-size: 28px;
+}
+
+
+.rest {
+    width: 45%;
+}
+
+.rest-card-container {
+    flex-flow: row wrap;
+}
+
+.menu-box {
+    width: 30%;
+}
+.menu-container {
+    justify-content: space-around;
+    padding-right: 3%;
+}
+.menu-btn {
+    min-width: 100%;
+}
+}
