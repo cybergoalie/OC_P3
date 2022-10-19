@@ -212,11 +212,11 @@ body header, main {
 }
 
 .search-form::placeholder {
-    font-color: black;
+    
     font-weight: 700;
     font-family: Roboto;
     font-size: 16px;
-    align-text: center;
+    
 }
 
 
@@ -453,15 +453,15 @@ body header, main {
     padding: 20px 10px 15px 10px;
 }
 
-.rest-textbar span {
+.rest-textbar div {
     margin-left: 10px;
 
 }
 
 
 
-.rest-textbar span p {
-    padding-top: 5px;
+.rest-textbar div p {
+    padding-top: 8px;
 }
 
 
@@ -501,7 +501,7 @@ eg. background: #ffffff url("img_tree.png") no-repeat right top /*
 }
 
 .footer-section img {
-    filter: -webkit-filter: invert(1); 
+    -webkit-filter: invert(1); 
     filter: invert(1);
     width: 33%;
 }
@@ -736,7 +736,7 @@ ul {
     margin: 10px 0px;
     flex-shrink: 0;
     animation: spin 1s linear;
-    animation iteration-count: 1;
+    animation-iteration-count: 1;
 }
 
 @keyframes spin {
@@ -858,7 +858,7 @@ width: 30%;
 .menu-text h2 {
     font-size: 18px;
 }
-
 .menu-text p {
     font-size: 15px;
+}
 }
