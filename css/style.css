@@ -1,4 +1,4 @@
-/* prepare html document */
+/* define universal selector (selects all elements) */
 *{
     box-sizing: border-box;
     margin: 0;
@@ -12,8 +12,6 @@ html{
 html, body {
     height: 100%;
     width: 100%;
-    margin: 0;
-    padding: 0;
 }
 
 /* target the body and put in the center of the page */
@@ -455,17 +453,14 @@ body header, main {
     padding: 20px 10px 15px 10px;
 }
 
-.rest-text {
+.rest-textbar span {
     margin-left: 10px;
 
 }
 
-.rest-text h3 {
-    font-weight: 700;
-    font-size: 20px;
-}
 
-.rest-text p {
+
+.rest-textbar span p {
     padding-top: 5px;
 }
 
@@ -525,7 +520,6 @@ eg. background: #ffffff url("img_tree.png") no-repeat right top /*
    color: white;
     text-decoration: none;
     display: inline;
-/* not sure why, but placing color:white and text-decor:none here did nothing to affect my site */
 }
 
 
@@ -714,6 +708,10 @@ ul {
     flex-shrink: 0;
 }
 
+.price:before {
+    content: "€"; 
+}
+
 .check-wrapper {
    background-color: #99E2D0;
     border-top-right-radius: 15px;
@@ -850,5 +848,17 @@ width: 30%;
 }
 .menu-btn {
     min-width: 100%;
+    height: 65px;
 }
+
+.menu-btn:hover .check-wrapper {
+    width: 60px;
+}
+
+.menu-text h2 {
+    font-size: 18px;
+}
+
+.menu-text p {
+    font-size: 15px;
 }
