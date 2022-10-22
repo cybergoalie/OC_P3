@@ -23,6 +23,8 @@ body header, main {
 
 /* LOADING ANIMATION BEGINS */
 
+/* animation shorthand: name duration timing-function delay iteration-count direction fill-mode play-state */
+
 #loading-wrapper {
     -moz-animation: loadAnimation 0s ease-in 1.3s forwards;
     /* Firefox */
@@ -31,8 +33,7 @@ body header, main {
     -o-animation: loadAnimation 0s ease-in 1.3s forwards;
     /* Opera */
     animation: loadAnimation 0s ease-in 1.3s forwards;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
+   
 }
 
 @keyframes loadAnimation {

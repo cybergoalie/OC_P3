@@ -1,0 +1,19 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "OpenClassrooms, Project3",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cybergoalie/cybergoalie.github.io.git"
+  },
+  "author": "Cassandra Young",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cybergoalie/cybergoalie.github.io/issues"
+  },
+  "homepage": "https://github.com/cybergoalie/cybergoalie.github.io#readme"
+}
