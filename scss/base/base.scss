@@ -1,3 +1,21 @@
-@mixin animate($animation,$duration,$method,$times){
-    animation: $animation $duration $method $times;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+html{
+    background-color: $white;
+}
+  
+html, body {
+    height: 100%;
+    width: 100%;
+}
+  
+body header, main {
+    width: 100%;
+    margin: 0 auto;
+    background-color: $white;
+}
+    

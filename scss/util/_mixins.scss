@@ -1,0 +1,43 @@
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+      @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+      @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+      @content;
+    }
+    @-o-keyframes #{$animation-name} {
+      @content;
+    }  
+    @keyframes #{$animation-name} {
+      @content;
+    }
+}
+  
+@mixin animation($str) {
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    -o-animation: #{$str};
+    animation: #{$str};      
+}
+
+@mixin devices ($breakpoint) { //the mixin name is devices
+  
+    @if $breakpoint == desktop {    
+    @media only screen and (min-width: 769px) {
+      @content;
+    }
+  }
+}
+
+/* declare mixin parameters, then add the following to the elements: 
+ @include devices(desktop) {
+    _:_;
+}
+*/
+
+
+  

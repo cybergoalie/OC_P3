@@ -1,0 +1,302 @@
+/* SUB (RESTAURANTS) PAGES Style BEGINS */
+
+/* HEADER BEGINS */
+
+/* NAV BEGINS */
+
+.rest-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+  }
+  
+  .rest-nav-icon {
+    font-size: 18px;
+    margin:25px;
+    text-decoration: none;
+  }
+  
+  .rest-nav-logo {
+    margin-right: 15%;
+    width: 65%;
+    padding: 20px;
+  }
+  
+  /* NAV ENDS */
+  
+  /*generic rest-card to header container */
+  
+  .rest-header {
+    width: 100%;
+    height: auto;
+    position: relative;
+    text-align: left;   
+  }
+  /* unique page header container properties */
+  
+  .restpg-img {
+    width: 100%;
+    object-fit: cover;
+    height: 350px;
+  } 
+  
+  .restpg-textbar {
+    position: absolute;
+    bottom: .0001px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e7e3e6;
+    padding: 30px 25px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    font-family: Shrikhand;
+    font-size: 6vw;
+  }
+  
+  .restpg-textbar h3 {
+    max-width: 85%;
+  }
+  
+  
+  
+  /*END OF REST.PAGE HEADER STYLE*
+  
+  /* MENU SECTION BEGINS */
+  
+  .menu-container {
+  
+    background-color:#e7e3e6;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;   
+    justify-content: center; 
+  }
+  
+  
+  
+  
+  .menu-container li {
+    opacity: .41;
+    transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -webkit-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    margin: 10px;
+  }
+  
+  .menu-container:hover li {
+    opacity: 1;  
+    margin-bottom: 1%;
+  }
+  
+  .menu-container:hover li:nth-child(2n) {
+    transition-delay: .1s;
+  }
+  
+  .menu-container:hover li:nth-child(3n) {
+    transition-delay: .2s;
+  }
+  
+  .menu-container:hover li:nth-child(4n) {
+    transition-delay: .3s;
+  }
+  
+  ul {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    list-style: none;
+    width: 96%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  
+  }
+  
+  .menu-header {
+    position: relative;
+    line-height: 1.2em;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    margin-left: 25px;
+  }
+  /* the above and below blocks achieve the partial underline */
+  
+  .menu-header:before {
+    position: absolute;
+    left: 0;
+    top: 1.5em;
+    height: 0;
+    width: 50px;
+    content: '';
+    border-top: 3px solid #99E2D0;
+  }
+  
+  .menu-btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 10px;
+    background-color: white;
+    height: 80px;
+    border: none;  
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0px rgba(0, 0, 0, .2);
+    cursor: pointer;   
+  }
+  .menu-text {
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .menu-text h2 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space:nowrap;
+  }
+  
+  .menu-text p {
+    padding-top: 5px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space:nowrap;
+  }
+  
+  .price {
+    font-weight: bold;
+    font-size: 16px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    flex-shrink: 0;
+  }
+  
+  .price:before {
+    content: "€"; 
+  }
+  
+  .check-wrapper {
+   background-color: #99E2D0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: none;
+    color: #99e2d0;
+    width: 0px;
+    min-height: 100%;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .check-wrapper i {
+    height: auto;
+    padding: 13px;
+    border-radius: 50%;
+    display: none;
+    background-color: white;
+    border: none;
+    margin: 10px 0px;
+    flex-shrink: 0;
+    animation: spin 1s linear;
+    animation-iteration-count: 1;
+  }
+  
+  @keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+  }
+  
+  .menu-btn:hover .check-wrapper i {
+    display: flex;
+  }
+  
+  .menu-btn:hover .price {
+    margin-right: 15px;
+    transition: margin-right 1.5s;
+  }
+  
+  .menu-btn:hover .check-wrapper {
+    width: 100px;
+    transition: width 1.5s;
+    
+  }
+  /* END MENU SECTION */
+  .menu-box {
+    @include devices(desktop) {
+    width: 30%;}
+}
+.menu-container {
+    @include devices(desktop) {
+  justify-content: space-around;
+  padding-right: 3%;
+}}
+.menu-btn {
+    @include devices(desktop) {
+    min-width: 100%;
+  height: 65px;
+}}
+
+.menu-btn:hover .check-wrapper {
+    @include devices(desktop) {
+    width: 60px;
+}}
+
+.menu-text h2 {
+    @include devices(desktop) {
+    font-size: 18px;
+}}
+.menu-text p {
+    @include devices(desktop) {
+  font-size: 15px;
+}}
+
+  
+  /* ORDER SECTION BEGINS */
+  
+  .order-section {
+    width: 100%;
+  }
+  
+  .order-box {
+    display: flex;
+    justify-content: center;
+    background-color: #e7e3e6;
+    width: 100%;
+  }
+  
+  .order-btn {
+    border: none;
+    box-shadow: 0 4px 8px 0px rgba(0, 0, 0, .2);
+    color: white;
+    padding: 15px 30px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: ease 1s;
+    width: 65%; 
+    @include linear-gradient(bottom, $purple $pink);
+  }
+  
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  
+  .order-btn:hover {
+    box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, .3);
+    transform: scale(1.2);
+  }
+  
+  /* EXTRA PAGES STYLE ENDS */

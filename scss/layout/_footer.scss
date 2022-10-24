@@ -1,0 +1,32 @@
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: invert($white);
+    justify-content: flex-start;
+    padding: 30px;
+}
+  
+.footer-section img {
+    -webkit-filter: invert(1); 
+    filter: invert(1);
+    width: 33%;
+}
+
+.footer-section div {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+  
+.footer-link {
+    margin-top: 15px;
+    color: white;
+    text-decoration: none;
+    display: inline;
+}

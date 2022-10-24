@@ -23,32 +23,31 @@ body header, main {
 
 /* LOADING ANIMATION BEGINS */
 
-/* animation shorthand: name duration timing-function delay iteration-count direction fill-mode play-state */
-
-#loading-wrapper {
-    -moz-animation: loadAnimation 0s ease-in 1.3s forwards;
-    /* Firefox */
-    -webkit-animation: loadAnimation 0s ease-in 1.3s forwards;
-    /* Safari and Chrome */
-    -o-animation: loadAnimation 0s ease-in 1.3s forwards;
-    /* Opera */
-    animation: loadAnimation 0s ease-in 1.3s forwards;
-   
-}
-
-@keyframes loadAnimation {
+@keyframes hide-loader {
     to {
         width:0;
         height:0;
         overflow:hidden;
     }
 }
-@-webkit-keyframes loadAnimation {
+@-webkit-keyframes hide-loader {
     to {
         width:0;
         height:0;
         visibility:hidden;
     }
+}
+
+#loading-wrapper {
+    -moz-animation: hide-loader 0s ease-in 1.3s forwards;
+    /* Firefox */
+    -webkit-animation: hide-loader 0s ease-in 1.3s forwards;
+    /* Safari and Chrome */
+    -o-animation: hide-loader 0s ease-in 1.3s forwards;
+    /* Opera */
+    animation: hide-loader 0s ease-in 1.3s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 }
 
 #loading-wrapper {
@@ -58,7 +57,7 @@ body header, main {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
 }
 
 .loader {

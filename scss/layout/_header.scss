@@ -1,0 +1,79 @@
+/* Quick Search Container Begins */
+
+.quick-search {
+    display: flex;
+    width: 100%; 
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d8d5d752;
+  }
+  
+  .quick-search h1 {
+    margin-top: 10px;
+    padding: 30px;
+    text-align: center;
+  }
+  
+.quick-search p {
+    width: 85%;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 400;
+}
+  
+  /* box-shadow parameters= offset-x | offset-y | blur-radius | spread-radius | color */
+.quick-search div {
+    border: none;
+    box-shadow: 0 4px 8px 0px rgba(0, 0, 0, .2);
+    color: white;
+    padding: 15px 30px;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    background: linear-gradient(0deg, ($purple) 21%, ($pink)100%, ($purple) 100%);
+    cursor: pointer;
+    transition: ease 1s;
+    max-width: 65%;
+    text-align: center;
+   
+  &:hover {
+    box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, .3);
+    transform: scale(1.2);
+  }}
+  
+  /* Quick Search Container Ends */
+  
+  /* Explaining the Process Section Begins */
+  
+  .howto-section {
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+    align-content: center;
+  }
+  
+  .howto-section h3 {
+    font-size: 20px;
+    width: 100%;
+    margin: 30px 0px;
+    padding-left: 30px;
+  
+  }
+  
+  .howto-headline {
+    @include devices(desktop) {
+  width: auto;
+  padding: 0;
+  font-size: 28px;
+}}
+
+.howto-section {
+  @include devices(desktop) {
+  height: 300px; }
+  
+   }
+   
