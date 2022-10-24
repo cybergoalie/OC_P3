@@ -286,10 +286,10 @@
     margin-top: 30px;
     font-size: 18px;
     border-radius: 30px;
+    background: linear-gradient(0deg, rgba(147,86,220,1) 21%, rgba(255,121,218,1) 100%, rgba(147,86,220,1) 100%);
     cursor: pointer;
     transition: ease 1s;
-    width: 65%; 
-    @include linear-gradient(bottom, $purple $pink);
+    width: 65%;
   }
   
   /* offset-x | offset-y | blur-radius | spread-radius | color */

@@ -7,16 +7,16 @@
 @import "./base/base";
 @import "./base/typography";
 
-@import "./components/buttons.scss";
-@import "./components/loader.scss";
+@import "./components/buttons";
+@import "./components/loader";
 
-@import "./layout/container.scss";
-@import "./layout/header.scss";
-@import "./layout/nav.scss";
-@import "./layout/form.scss";
-@import "./layout/footer.scss";
+@import "./layout/container";
+@import "./layout/header";
+@import "./layout/nav";
+@import "./layout/form";
+@import "./layout/footer";
 
-@import "./pages/restaurants.scss";
+@import "./pages/restaurants";
 
 /* Use the 7:1 pattern of directories for a manageable codebase */
 
