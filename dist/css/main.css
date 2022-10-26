@@ -1,6 +1,5 @@
 @charset "UTF-8";
 /* This the order that Sass will compile all of its contents... as a rule, you want to import in the following order: 1. Utils (variables, functions, mixins, then placeholders), 2. Vendor sheets, 3. Base, 4. Components, 5. Layout, 6. Pages, and 7. Themes */ /* define variables for the primary colors */
-/* not sure why, but adding $white and $beige caused compilation errors */
 /* declare mixin parameters, then add the following to the elements: 
  @include devices(desktop) {
     _:_;
@@ -14,7 +13,7 @@
 }
 
 html {
-  background-color: white;
+  background-color: #ffffff;
 }
 
 html, body {
@@ -25,7 +24,7 @@ html, body {
 body header, main {
   width: 100%;
   margin: 0 auto;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 body {
@@ -562,7 +561,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .rest-nav-icon {
