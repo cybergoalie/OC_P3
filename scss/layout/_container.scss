@@ -1,141 +1,122 @@
-
-  .rest-section-container {
-    background-color: #e7e2e6;
-    display: flex;
-    width: 100%; 
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
+.rest-section-container {
+  background-color: #e7e2e6;
+  display: flex;
+  width: 100%; 
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
         
-  .rest-headline {
-    width: 96%;
-    padding-left: 35px;
-    padding-top: 60px;
-  }
+.rest-headline {
+  width: 96%;
+  padding-left: 35px;
+  padding-top: 60px;
+}
   
-  .rest-card-container {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: flex;
-    width: 100%; 
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    height: auto;
-  }
-
-  .rest-card-container {
-    @include devices(desktop) {
+.rest-card-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  width: 100%; 
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: auto;
+  @include devices(desktop) {
     flex-flow: row wrap;
-}}
-
-  .rest {
-    width: 100%;
   }
-
-  .rest {
-    @include devices(desktop) {
-  width: 45%;}
 }
 
-  
-  .new-rest-wrapper {
-  
-    position: relative;
-    color: rgb(126, 206, 226);
-    width: 100%;
+.rest {
+  width: 100%;
+  @include devices(desktop) {
+    width: 45%;
   }
+}
+
+.new-rest-wrapper {
+  position: relative;
+  color: rgb(126, 206, 226);
+  width: 100%;
+}
   
-  .new-rest-label {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    color: #267963ce;
-    background: #99E2D0;
-    font-size: 16px;
-    font-weight: 500;
-    border-radius: 2px;
-    padding: 5px 30px;
-    
+.new-rest-label {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #267963ce;
+  background: #99E2D0;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 2px;
+  padding: 5px 30px;
+}
   
-  }
+.rest-card {
+  display: flex;
+  width: 90%; 
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: $white;
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, .1);
+  height: 330px;
+  border-radius: 20px;
+  margin: 30px;
+  text-decoration: none;
+  position: relative;
+  transition: ease .5s;
+}
   
-  .rest-card {
-    display: flex;
-    width: 90%; 
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: $white;
-    box-shadow: 0 0 8px 1px rgba(0, 0, 0, .1);
-    height: 330px;
-    border-radius: 20px;
-    margin: 30px;
-    text-decoration: none;
-    position: relative;
-    transition: ease .5s;
-  }
+.rest-card:hover {
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, .5);
+  transform: scale(1.01);
+}
   
+.rest-card:active {
+  color: black;
+}
   
-  .rest-card:hover {
-    box-shadow: 0 0 8px 1px rgba(0, 0, 0, .5);
-    transform: scale(1.01);
-  }
+.rest-img {
+  height: 75%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0;
+}
   
-  .rest-card:active {
-    color: black;
-  }
+.rest-textbar {
+  display: inline-flex;
+  width: 100%;
+  color: black;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px 15px 10px;
+}
   
+.rest-textbar div {
+  margin-left: 10px;
+}
   
-  
-  .rest-img {
-    height: 75%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0;
-  }
-  
-  .rest-textbar {
-    display: inline-flex;
-    width: 100%;
-    color: black;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10px 15px 10px;
-  }
-  
-  .rest-textbar div {
-    margin-left: 10px;
-  
-  }
-  
-  
-  
-  .rest-textbar div p {
+.rest-textbar div p {
     padding-top: 8px;
-  }
+}
   
+.heart:hover i{
+  opacity: 100%;
+  color: $primary;
+  transition: all 1s linear;
+  text-shadow: -1px 0 $primary, 0 1px $primary, 1px 0 $primary, 0 -1px $primary;
+}
   
-  .heart:hover i{
-    opacity: 100%;
-    color: $primary;
-    transition: all 1s linear;
-    text-shadow: -1px 0 $primary, 0 1px $primary, 1px 0 $primary, 0 -1px $primary;
-  }
+.heart i {
+  font-size: 24px;
+  color: white;
+  opacity: .8;
+  cursor: pointer;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
   
-  .heart i {
-    font-size: 24px;
-    color: white;
-    opacity: .8;
-    cursor: pointer;
-    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
-    
-  }
-  .heart {
+.heart {
   margin-right: 5%;
-  }
-
-  
-
+}

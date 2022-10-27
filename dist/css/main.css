@@ -62,7 +62,7 @@ body {
 }
 
 .howto-btn:hover {
-  background-color: rgb(229, 211, 250);
+  background-color: rgb(241, 228, 255);
 }
 
 .howto-btn:hover i {
@@ -75,7 +75,6 @@ body {
   margin-bottom: 50px;
   width: 81%;
 }
-
 @media only screen and (min-width: 769px) {
   .componentWrapper {
     width: 30%;
@@ -98,7 +97,6 @@ body {
   margin-left: 20px;
   font-size: 20px;
 }
-
 .howto-btn span {
   font-size: 18px;
   font-weight: bold;
@@ -113,8 +111,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-animation: hide-loader 0s ease-in 1.3s forwards;
-  animation: hide-loader 0s ease-in 1.3s forwards;
+  -webkit-animation: hide-loader 0s ease-in 3s forwards;
+  animation: hide-loader 0s ease-in 3s forwards;
 }
 
 @-webkit-keyframes hide-loader {
@@ -281,7 +279,6 @@ body {
   align-items: center;
   height: auto;
 }
-
 @media only screen and (min-width: 769px) {
   .rest-card-container {
     flex-flow: row wrap;
@@ -291,7 +288,6 @@ body {
 .rest {
   width: 100%;
 }
-
 @media only screen and (min-width: 769px) {
   .rest {
     width: 45%;
@@ -553,9 +549,6 @@ body {
   display: inline;
 }
 
-/* SUB (RESTAURANTS) PAGES Style BEGINS */
-/* HEADER BEGINS */
-/* NAV BEGINS */
 .rest-nav {
   display: flex;
   justify-content: space-between;
@@ -575,8 +568,6 @@ body {
   padding: 20px;
 }
 
-/* NAV ENDS */
-/*generic rest-card to header container */
 .rest-header {
   width: 100%;
   height: auto;
@@ -584,7 +575,6 @@ body {
   text-align: left;
 }
 
-/* unique page header container properties */
 .restpg-img {
   width: 100%;
   -o-object-fit: cover;
@@ -611,9 +601,6 @@ body {
   max-width: 85%;
 }
 
-/*END OF REST.PAGE HEADER STYLE*
-
-/* MENU SECTION BEGINS */
 .menu-container {
   background-color: #e7e3e6;
   display: flex;
@@ -679,7 +666,6 @@ ul {
   margin-left: 25px;
 }
 
-/* the above and below blocks achieve the partial underline */
 .menu-header:before {
   position: absolute;
   left: 0;
@@ -846,7 +832,7 @@ ul {
   width: 65%;
 }
 
-/* offset-x | offset-y | blur-radius | spread-radius | color */
+/*box-shadow shorthand: offset-x | offset-y | blur-radius | spread-radius | color */
 .order-btn:hover {
   box-shadow: 0px 4px 8px 1px rgb(161, 161, 161);
   transform: scale(1.2);
