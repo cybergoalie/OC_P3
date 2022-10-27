@@ -15,5 +15,26 @@
   "bugs": {
     "url": "https://github.com/cybergoalie/cybergoalie.github.io/issues"
   },
-  "homepage": "https://github.com/cybergoalie/cybergoalie.github.io#readme"
+  "homepage": "https://github.com/cybergoalie/cybergoalie.github.io#readme",
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "liveSassCompile.settings.excludeList": [
+      "**/node_modules/**",
+      ".vscode/xx",
+      "/base/**",
+      "/components/**",
+      "/layout/**",
+      "/pages/**",
+      "/themes/**",
+      "/util/**",
+      "/vendors/**"
+    ],
+    "liveSassCompile.settings.includeItems": [
+      "**/main/**"
+    ]
+  }
 }

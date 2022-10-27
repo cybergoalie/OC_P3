@@ -1,84 +1,14 @@
-/* This the order that Sass will compile all of its contents... as a rule, you want to import in the following order: 1. Utils (variables, functions, mixins, then placeholders), 2. Vendor sheets, 3. Base, 4. Components, 5. Layout, 6. Pages, and 7. Themes */
-@import "util/variables";
-@import "util/mixins";
-@import "util/placeholders";
-
-@import "base/base";
-@import "base/typography";
-
-@import "components/buttons";
-@import "components/loader";
-
-@import "layout/container";
-@import "layout/header";
-@import "layout/nav";
-@import "layout/form";
-@import "layout/footer";
-
-@import "pages/restaurants";
-
-/* Use the 7:1 pattern of directories for a manageable codebase */
-
-/* 1. Utils: store variables, functions, mixins, and %placeholders for extensions */
-
-/* 2. Vendors: a directory for third-party library style sheets such as Bootstrap or jquery UI */
-
-/* 3. Base: files that define the foundation of your site, such as the typography and norms you want applied site-wide, like box-sizing */
-
-/*  4. Components: store BEM blocks that are more self-contained, such as buttons */
-
-/*  5. Layouts: store BEM blocks which contain things that can be reused, such as a form or header for large layouts ... container.scss controls the style for all pages */
-
-/* 6. Pages: contains blocks of code/rules specific to a single page and won't be reused elsewhere */
-
-/*  7. Themes: store thematic code, such as custom styling for holidays */
-
-/* The simple structure is convenient for a small project like a single web page:
-
-_base.sass — contains all the resets, variables, mixins, and utility classes
-_layout.sass — all the Sass code handling the layout, which is the container and grid systems
-_components.sass — everything that is reusable – buttons, navbars, cards, and so on
-_main.sass — the main partial should contain only the imports of the already mentioned files
-Another example of the same simple structure is the following:
-
-_core.sass — contains variables, resets, mixins, and other similar styles
-_layout.sass — there are the styles for the header, footer, the grid system, etc
-_components.sass — styles for every component necessary for that project, including buttons, modals, etc.
-_app.sass — imports
-
-
-Larger projects... @import 'abstracts/variables';
-@import 'abstracts/functions'; @import 'abstracts/mixins'; @import 'vendors/bootstrap'; @import 'vendors/jquery-ui';
-@import 'base/reset'; @import 'base/typography'; @import 'layout/navigation'; @import 'layout/grid'; @import 'layout/header';
-@import 'layout/footer'; @import 'layout/sidebar'; @import 'layout/forms'; @import 'components/buttons';
-@import 'components/carousel'; @import 'components/slider';@import 'pages/home'; @import 'pages/about';
-@import 'pages/contact'; @import 'themes/theme'; @import 'themes/admin'; 
-...or even further simplified, 
-@import
-  ‘abstracts/variables’,
-  ‘abstracts/functions’,
-  ‘abstracts/mixins’,
-  ‘vendors/bootstrap’,
-  ‘vendors/jquery-ui’,
- 
-  ‘base/reset’,
-  ‘base/typography’,
- 
-  ‘layout/navigation’,
-  ‘layout/grid’,
-  ‘layout/header’,
-  ‘layout/footer’,
-  ‘layout/sidebar’,
-  ‘layout/forms’,
- 
-  ‘components/buttons’,
-  ‘components/carousel’,
-  ‘components/slider’,
- 
-  ‘pages/home’,
-  ‘pages/about’,
-  ‘pages/contact’,
- 
-  ‘themes/theme’,
-  ‘themes/admin’;
-*/
+@import 
+'util/variables',
+'util/mixins',
+'util/placeholders',
+'base/base',
+'base/typography',
+'components/buttons',
+'components/loader',
+'layout/container',
+'layout/header',
+'layout/nav',
+'layout/form',
+'layout/footer',
+'pages/restaurants';

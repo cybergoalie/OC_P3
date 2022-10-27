@@ -1,6 +1,6 @@
 
   .rest-section-container {
-    background-color: #d8d5d752;
+    background-color: #e7e2e6;
     display: flex;
     width: 100%; 
     flex-direction: column;
@@ -66,7 +66,7 @@
     width: 90%; 
     flex-direction: column;
     align-items: flex-start;
-    background-color: white;
+    background-color: $white;
     box-shadow: 0 0 8px 1px rgba(0, 0, 0, .1);
     height: 330px;
     border-radius: 20px;
@@ -120,9 +120,9 @@
   
   .heart:hover i{
     opacity: 100%;
-    color: $purple;
+    color: $primary;
     transition: all 1s linear;
-    text-shadow: -1px 0 #9356dc, 0 1px #9356dc, 1px 0 #9356dc, 0 -1px #9356dc;
+    text-shadow: -1px 0 $primary, 0 1px $primary, 1px 0 $primary, 0 -1px $primary;
   }
   
   .heart i {

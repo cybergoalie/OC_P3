@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* This the order that Sass will compile all of its contents... as a rule, you want to import in the following order: 1. Utils (variables, functions, mixins, then placeholders), 2. Vendor sheets, 3. Base, 4. Components, 5. Layout, 6. Pages, and 7. Themes */ /* define variables for the primary colors */
+/* define variables for the primary colors */
 /* declare mixin parameters, then add the following to the elements: 
  @include devices(desktop) {
     _:_;
@@ -39,6 +39,13 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media only screen and (min-width: 769px) {
+  .howto-btn-container {
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 10px;
+  }
+}
 
 .howto-btn {
   display: flex;
@@ -55,7 +62,7 @@ body {
 }
 
 .howto-btn:hover {
-  background-color: rgba(229, 211, 250, 0.356);
+  background-color: rgb(229, 211, 250);
 }
 
 .howto-btn:hover i {
@@ -96,14 +103,6 @@ body {
   font-size: 18px;
   font-weight: bold;
   text-align: left;
-}
-
-@media only screen and (min-width: 769px) {
-  .howto-btn-container {
-    flex-direction: row;
-    justify-content: space-around;
-    margin-left: 10px;
-  }
 }
 
 /* animation shorthand: name duration timing-function delay iteration-count direction fill-mode play-state */
@@ -258,7 +257,7 @@ body {
 
 /* LOADING ANIMATION ENDS */
 .rest-section-container {
-  background-color: rgba(216, 213, 215, 0.3215686275);
+  background-color: #e7e2e6;
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -322,7 +321,7 @@ body {
   width: 90%;
   flex-direction: column;
   align-items: flex-start;
-  background-color: white;
+  background-color: #ffffff;
   box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
   height: 330px;
   border-radius: 20px;
@@ -372,7 +371,7 @@ body {
   opacity: 100%;
   color: #9356DC;
   transition: all 1s linear;
-  text-shadow: -1px 0 #9356dc, 0 1px #9356dc, 1px 0 #9356dc, 0 -1px #9356dc;
+  text-shadow: -1px 0 #9356DC, 0 1px #9356DC, 1px 0 #9356DC, 0 -1px #9356DC;
 }
 
 .heart i {
@@ -480,7 +479,7 @@ body {
   width: 100%;
   padding: 20px 0px;
   font-weight: bold;
-  background-color: rgba(128, 128, 128, 0.205);
+  background-color: rgba(218, 214, 214, 0.205);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -624,6 +623,12 @@ body {
   align-content: flex-start;
   justify-content: center;
 }
+@media only screen and (min-width: 769px) {
+  .menu-container {
+    justify-content: space-around;
+    padding-right: 3%;
+  }
+}
 
 .menu-container li {
   opacity: 0.41;
@@ -660,6 +665,11 @@ ul {
   flex-wrap: wrap;
   justify-content: flex-start;
 }
+@media only screen and (min-width: 769px) {
+  ul {
+    width: 30%;
+  }
+}
 
 .menu-header {
   position: relative;
@@ -693,6 +703,12 @@ ul {
   box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
+@media only screen and (min-width: 769px) {
+  .menu-btn {
+    min-width: 100%;
+    height: 65px;
+  }
+}
 
 .menu-text {
   text-align: left;
@@ -708,12 +724,22 @@ ul {
   overflow: hidden;
   white-space: nowrap;
 }
+@media only screen and (min-width: 769px) {
+  .menu-text h2 {
+    font-size: 18px;
+  }
+}
 
 .menu-text p {
   padding-top: 5px;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+@media only screen and (min-width: 769px) {
+  .menu-text p {
+    font-size: 15px;
+  }
 }
 
 .price {
@@ -733,7 +759,7 @@ ul {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   border: none;
-  color: #99e2d0;
+  color: #99E2D0;
   width: 0px;
   min-height: 100%;
   overflow: hidden;
@@ -747,7 +773,7 @@ ul {
   padding: 13px;
   border-radius: 50%;
   display: none;
-  background-color: white;
+  background-color: #ffffff;
   border: none;
   margin: 10px 0px;
   flex-shrink: 0;
@@ -787,43 +813,9 @@ ul {
   width: 100px;
   transition: width 1.5s;
 }
-
-/* END MENU SECTION */
-@media only screen and (min-width: 769px) {
-  .menu-box {
-    width: 30%;
-  }
-}
-
-@media only screen and (min-width: 769px) {
-  .menu-container {
-    justify-content: space-around;
-    padding-right: 3%;
-  }
-}
-
-@media only screen and (min-width: 769px) {
-  .menu-btn {
-    min-width: 100%;
-    height: 65px;
-  }
-}
-
 @media only screen and (min-width: 769px) {
   .menu-btn:hover .check-wrapper {
     width: 60px;
-  }
-}
-
-@media only screen and (min-width: 769px) {
-  .menu-text h2 {
-    font-size: 18px;
-  }
-}
-
-@media only screen and (min-width: 769px) {
-  .menu-text p {
-    font-size: 15px;
   }
 }
 
@@ -848,7 +840,7 @@ ul {
   margin-top: 30px;
   font-size: 18px;
   border-radius: 30px;
-  background: linear-gradient(0deg, rgb(147, 86, 220) 21%, rgb(255, 121, 218) 100%, rgb(147, 86, 220) 100%);
+  background: linear-gradient(0deg, #9356DC 21%, #FF79DA 100%, #9356DC 100%);
   cursor: pointer;
   transition: ease 1s;
   width: 65%;
@@ -856,65 +848,8 @@ ul {
 
 /* offset-x | offset-y | blur-radius | spread-radius | color */
 .order-btn:hover {
-  box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 4px 8px 1px rgb(161, 161, 161);
   transform: scale(1.2);
 }
 
-/* EXTRA PAGES STYLE ENDS */
-/* Use the 7:1 pattern of directories for a manageable codebase */
-/* 1. Utils: store variables, functions, mixins, and %placeholders for extensions */
-/* 2. Vendors: a directory for third-party library style sheets such as Bootstrap or jquery UI */
-/* 3. Base: files that define the foundation of your site, such as the typography and norms you want applied site-wide, like box-sizing */
-/*  4. Components: store BEM blocks that are more self-contained, such as buttons */
-/*  5. Layouts: store BEM blocks which contain things that can be reused, such as a form or header for large layouts ... container.scss controls the style for all pages */
-/* 6. Pages: contains blocks of code/rules specific to a single page and won't be reused elsewhere */
-/*  7. Themes: store thematic code, such as custom styling for holidays */
-/* The simple structure is convenient for a small project like a single web page:
-
-_base.sass — contains all the resets, variables, mixins, and utility classes
-_layout.sass — all the Sass code handling the layout, which is the container and grid systems
-_components.sass — everything that is reusable – buttons, navbars, cards, and so on
-_main.sass — the main partial should contain only the imports of the already mentioned files
-Another example of the same simple structure is the following:
-
-_core.sass — contains variables, resets, mixins, and other similar styles
-_layout.sass — there are the styles for the header, footer, the grid system, etc
-_components.sass — styles for every component necessary for that project, including buttons, modals, etc.
-_app.sass — imports
-
-
-Larger projects... @import 'abstracts/variables';
-@import 'abstracts/functions'; @import 'abstracts/mixins'; @import 'vendors/bootstrap'; @import 'vendors/jquery-ui';
-@import 'base/reset'; @import 'base/typography'; @import 'layout/navigation'; @import 'layout/grid'; @import 'layout/header';
-@import 'layout/footer'; @import 'layout/sidebar'; @import 'layout/forms'; @import 'components/buttons';
-@import 'components/carousel'; @import 'components/slider';@import 'pages/home'; @import 'pages/about';
-@import 'pages/contact'; @import 'themes/theme'; @import 'themes/admin'; 
-...or even further simplified, 
-@import
-  ‘abstracts/variables’,
-  ‘abstracts/functions’,
-  ‘abstracts/mixins’,
-  ‘vendors/bootstrap’,
-  ‘vendors/jquery-ui’,
-
-  ‘base/reset’,
-  ‘base/typography’,
-
-  ‘layout/navigation’,
-  ‘layout/grid’,
-  ‘layout/header’,
-  ‘layout/footer’,
-  ‘layout/sidebar’,
-  ‘layout/forms’,
-
-  ‘components/buttons’,
-  ‘components/carousel’,
-  ‘components/slider’,
-
-  ‘pages/home’,
-  ‘pages/about’,
-  ‘pages/contact’,
-
-  ‘themes/theme’,
-  ‘themes/admin’;
-*//*# sourceMappingURL=main.css.map */
+/* EXTRA PAGES STYLE ENDS *//*# sourceMappingURL=main.css.map */
