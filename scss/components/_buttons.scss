@@ -3,9 +3,9 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%; 
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 40px;
   @include devices(desktop) {
     flex-direction: row;
     justify-content: space-around;
@@ -16,61 +16,66 @@
 .howto-btn {
   display: flex;
   justify-content: flex-start;
-  height: 100px;
+  height: 75px;
+  width: 100%;
   align-items: center;
   border: none;
-  padding: 10px 30px;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px 0px rgba(0, 0, 0, .2);
-  background-color: #d8d5d752;
+  padding: 15px;
+  margin: 2px 5px;
+  border-radius: 20px;
+  @include box-shadow (0 4px 9px 0px rgba(0, 0, 0, .13));
+  background-color: $sand;
   cursor: pointer;
-  transition: ease;
-}
+  transition: all .3s ease-in-out;
   
-.howto-btn:hover {
-  background-color: rgb(241, 228, 255);
-}
-  
-.howto-btn:hover i {
-  color: $primary;
-}
-  
-.componentWrapper {
-  border: none;
-  border-radius: 40px;
-  margin-bottom: 50px;
-  width: 81%;
-  @include devices(desktop) {
-    width: 30%; 
+  &:hover {
+    background-color: rgb(241, 228, 255)
   }
-}
   
-.howto-label {
-  position:absolute;
-  margin-left:-15px;
-  margin-top: 38px;
-  color:white;
-  background: $primary;
-  font-size: 18px;
-  border-radius: 50%;
-  padding: 2px 10px;  
-}
+  &:hover i {
+    color: $primary;
+    opacity: 1;
+  }
   
-  
-.howto-btn {
   i {
-    margin-right: 30px;
+    margin-right: 20px;
     margin-left: 20px;
-    font-size: 20px;
+    font-size: 1.2em;
+    opacity: .5;
   }
+  
   span {
-    font-size: 18px;
+    font-size: 1em;
     font-weight: bold;
     text-align: left;
   }
 }
 
-//restaurant pages order button
+.componentWrapper {
+  border: none;
+  border-radius: 40px;
+  margin-bottom: 20px;
+  width: 85%;
+  @include devices(desktop) {
+    width: 30%; 
+  }
+
+  .howto-label {
+  position:absolute;
+  margin-left:-8px;
+  margin-top: 30px;
+  color:white;
+  background: $primary;
+  font-size: .9em;
+  border-radius: 50%;
+  padding: 5px 8px 3px 8px;  
+}
+}
+
+
+//home pages explore button, see layout/header a tag
+//restaurant pages order button, see pages/restaurants
+
 
 
   

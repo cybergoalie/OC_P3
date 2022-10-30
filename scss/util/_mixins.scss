@@ -24,6 +24,12 @@
     animation: #{$str};      
 }
 
+@mixin transition($same) {
+  -webkit-transition: #{$same};
+  -moz-transition: #{$same};
+  -o-transition: #{$same};
+}
+
 @mixin devices ($breakpoint) { //the mixin name is devices
   
   @if $breakpoint == desktop {    
@@ -33,8 +39,14 @@
   }
 }
 
-/* declare mixin parameters, then add the following to the elements: 
- @include devices(desktop) {
-    _:_;
+// declare mixin parameters, then add the following to the elements: @include devices(desktop) {_:_;} 
+
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;       
+          box-shadow: $shadow;
 }
-*/
+
+//@include box-shadow(_px _px _px (color))
+// box-shadow parameters= offset-x | offset-y | blur-radius | spread-radius | color 
+
