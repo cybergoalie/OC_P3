@@ -30,6 +30,7 @@
   -webkit-transition: #{$same};
   -moz-transition: #{$same};
   -o-transition: #{$same};
+  transition: #{$same};
 }
 
 // box-shadow parameters= 
