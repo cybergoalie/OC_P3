@@ -29,24 +29,19 @@
 @mixin transition($same) {
   -webkit-transition: #{$same};
   -moz-transition: #{$same};
+  -ms-transition: #{$same};
   -o-transition: #{$same};
   transition: #{$same};
 }
 
-// box-shadow parameters= 
-
 @mixin box-shadow($shadow...) {
-  -webkit-box-shadow: $shadow;
-     -moz-box-shadow: $shadow;       
-          box-shadow: $shadow;
+  -webkit-box-shadow: #{$shadow};
+  -moz-box-shadow: #{$shadow};
+  -ms-box-shadow: #{$shadow};
+  -o-box-shadow: #{$shadow};
+  box-shadow: #{$shadow};
 }
 // + on element, add: @include box-shadow(offset-x (_px), offset-y (_px), blur-radius (_px), spread-radius (_px), color)
-
-//ANIMATION MIXINS FOR SUBPAGE
-
-
-
-
 
 
 @mixin devices ($breakpoint) { //the mixin name is devices

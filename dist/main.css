@@ -54,6 +54,8 @@ body {
   padding: 15px;
   margin: 2px 5px;
   border-radius: 20px;
+  -ms-box-shadow: 0 4px 9px 0px rgba(0, 0, 0, 0.13);
+  -o-box-shadow: 0 4px 9px 0px rgba(0, 0, 0, 0.13);
   box-shadow: 0 4px 9px 0px rgba(0, 0, 0, 0.13);
   background-color: #f5f5f5;
   cursor: pointer;
@@ -314,6 +316,8 @@ body {
   flex-direction: column;
   align-items: flex-start;
   background-color: #ffffff;
+  -ms-box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
   height: 250px;
   border-radius: 20px;
@@ -324,6 +328,8 @@ body {
 }
 
 .rest-card:hover {
+  -ms-box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.5);
+  -o-box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.5);
   transform: scale(1.01);
 }
@@ -400,6 +406,8 @@ body {
 }
 .explore-section a {
   border: none;
+  -ms-box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2);
   color: white;
   padding: 15px 30px;
@@ -415,6 +423,8 @@ body {
   text-decoration: none;
 }
 .explore-section a:hover {
+  -ms-box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.3);
   transform: scale(1.2);
 }
@@ -682,6 +692,8 @@ nav img {
   background-color: #ffffff;
   border: none;
   border-radius: 15px;
+  -ms-box-shadow: 0 4px 9px 0px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 4px 9px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 9px 0px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
