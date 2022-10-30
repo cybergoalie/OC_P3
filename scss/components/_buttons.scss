@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 40px;
-  @include devices(desktop) {
+  @include devices(tablet) {
     flex-direction: row;
     justify-content: space-around;
     margin-left: 10px;
@@ -56,7 +56,7 @@
   border-radius: 40px;
   margin-bottom: 20px;
   width: 85%;
-  @include devices(desktop) {
+  @include devices(tablet) {
     width: 30%; 
   }
 

@@ -459,7 +459,8 @@ body {
 
 .main-nav img {
   padding: 20px 0px 15px 0px;
-  max-width: 45%;
+  margin: 0px 10px;
+  max-width: 55%;
 }
 
 .main-nav div {
@@ -574,18 +575,18 @@ nav img {
   position: absolute;
   bottom: 0.0001px;
   width: 100%;
+  padding: 15px 15px 0px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #f5f5f5;
-  padding: 30px 25px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   font-family: Shrikhand;
 }
 .rest-header div h1 {
   max-width: 85%;
-  font-size: 2em;
+  font-size: 1.8em;
   font-weight: 500;
 }
 
@@ -619,50 +620,28 @@ nav img {
   }
 }
 .menu-container ul li {
-  margin: 10px;
-  -webkit-animation: slide-in 2s ease;
-          animation: slide-in 2s ease;
-  -webkit-animation: slide-up 2s ease;
-          animation: slide-up 2s ease;
-}
-@-webkit-keyframes slide-in {
-  0% {
-    transform: translate3d(0, 0, 0);
-    opacity: 0;
-  }
-  100% {
-    transform: translate3d(1, 0, 0);
-    opacity: 1;
-  }
-}
-@keyframes slide-in {
-  0% {
-    transform: translate3d(0, 0, 0);
-    opacity: 0;
-  }
-  100% {
-    transform: translate3d(1, 0, 0);
-    opacity: 1;
-  }
+  opacity: 0;
+  -webkit-animation: slide-up 1.5s ease-in 0.1s forwards;
+          animation: slide-up 1.5s ease-in 0.1s forwards;
 }
 @-webkit-keyframes slide-up {
-  0% {
-    transform: translate3d(0, 0, 0);
-    margin-bottom: 0;
+  from {
+    opacity: 0;
+    transform: translate(0, 0);
   }
-  100% {
-    transform: translate3d(1%, 0, 0);
-    margin-bottom: 1%;
+  to {
+    opacity: 1;
+    transform: translate(0, -20px);
   }
 }
 @keyframes slide-up {
-  0% {
-    transform: translate3d(0, 0, 0);
-    margin-bottom: 0;
+  from {
+    opacity: 0;
+    transform: translate(0, 0);
   }
-  100% {
-    transform: translate3d(1%, 0, 0);
-    margin-bottom: 1%;
+  to {
+    opacity: 1;
+    transform: translate(0, -20px);
   }
 }
 .menu-container ul li:nth-child(2n) {
@@ -682,30 +661,28 @@ nav img {
   position: relative;
   line-height: 1.2em;
   padding-bottom: 10px;
-  margin-bottom: 10px;
-  margin-left: 25px;
+  margin: 0px 0px 0px 15px;
 }
 .menu-header:before {
   position: absolute;
   left: 0;
   top: 1.5em;
   height: 0;
-  width: 50px;
+  width: 40px;
   content: "";
   border-top: 3px solid #99E2D0;
 }
 
 .menu-btn {
-  width: 100%;
+  width: 96%;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin: 10px;
-  background-color: white;
-  height: 80px;
+  background-color: #ffffff;
   border: none;
   border-radius: 15px;
-  box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 9px 0px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 @media only screen and (min-width: 769px) {
@@ -715,8 +692,8 @@ nav img {
   }
 }
 .menu-btn:hover .check-wrapper {
-  width: 100px;
-  transition: width 1.5s;
+  width: 17.7%;
+  transition: width 1.3s;
 }
 @media only screen and (min-width: 769px) {
   .menu-btn:hover .check-wrapper {
@@ -727,15 +704,13 @@ nav img {
   display: flex;
 }
 .menu-btn:hover .price {
-  margin-right: 15px;
-  transition: margin-right 1.5s;
+  margin-right: 3px;
+  transition: margin-right 1.3s;
 }
 
 .menu-text {
   text-align: left;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-bottom: 10px;
+  padding: 10px;
   flex: 1;
   min-width: 0;
 }
@@ -743,6 +718,7 @@ nav img {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  font-size: 1.1em;
 }
 @media only screen and (min-width: 769px) {
   .menu-text h2 {
@@ -754,6 +730,7 @@ nav img {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  font-size: 1em;
 }
 @media only screen and (min-width: 769px) {
   .menu-text p {
@@ -765,10 +742,8 @@ nav img {
   padding-right: 20px;
   padding-bottom: 10px;
   flex-shrink: 0;
-}
-.price font {
-  weight: bold;
-  size: 16px;
+  font-weight: bold;
+  font-size: 16px;
 }
 .price:before {
   content: "€";
@@ -789,7 +764,7 @@ nav img {
 }
 .check-wrapper i {
   height: auto;
-  padding: 13px;
+  padding: 4px;
   border-radius: 50%;
   display: none;
   background-color: #ffffff;
@@ -824,24 +799,25 @@ nav img {
 .order-container div {
   display: flex;
   justify-content: center;
-  background-color: #e7e3e6;
+  background-color: #f5f5f5;
   width: 100%;
 }
 .order-container span {
   border: none;
+  width: 45%;
   box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2);
   color: white;
   padding: 15px 30px;
-  margin-bottom: 50px;
-  margin-top: 30px;
-  font-size: 18px;
+  margin-bottom: 60px;
+  margin-top: 20px;
+  font-size: 1em;
+  text-align: center;
   border-radius: 30px;
-  background: linear-gradient(0deg, #9356DC 21%, #FF79DA 100%, #9356DC 100%);
-  cursor: pointer;
-  transition: ease 1s;
-  width: 65%;
+  background: linear-gradient(0deg, #9356DC 8%, #FF79DA 100%, #9356DC 100%);
+  transition: ease 1.3s;
 }
 .order-container span:hover {
+  cursor: pointer;
   box-shadow: 0px 4px 8px 1px rgb(235, 232, 234);
   transform: scale(1.2);
 }/*# sourceMappingURL=main.css.map */

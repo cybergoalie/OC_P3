@@ -1,3 +1,5 @@
+//GENERAL MIXINS TO STANDARDIZE CONTENT BETWEEN BROWSERS
+
 @mixin keyframes($animation-name) {
   @-webkit-keyframes #{$animation-name} {
     @content;
@@ -16,14 +18,12 @@
   }
 }
 
-
-  
 @mixin animation($str) {
-    -webkit-animation: #{$str};
-    -moz-animation: #{$str};
-    -ms-animation: #{$str};
-    -o-animation: #{$str};
-    animation: #{$str};      
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
 }
 
 @mixin transition($same) {
@@ -32,37 +32,34 @@
   -o-transition: #{$same};
 }
 
-@mixin devices ($breakpoint) { //the mixin name is devices
-  
-  @if $breakpoint == desktop {    
-    @media only screen and (min-width: 769px) {
-      @content;
-    }
-  }
-}
-
-// declare mixin parameters, then add the following to the elements: @include devices(desktop) {_:_;} 
+// box-shadow parameters= 
 
 @mixin box-shadow($shadow...) {
   -webkit-box-shadow: $shadow;
      -moz-box-shadow: $shadow;       
           box-shadow: $shadow;
 }
+// + on element, add: @include box-shadow(offset-x (_px), offset-y (_px), blur-radius (_px), spread-radius (_px), color)
 
-//@include box-shadow(_px _px _px (color))
-// box-shadow parameters= offset-x | offset-y | blur-radius | spread-radius | color 
+//ANIMATION MIXINS FOR SUBPAGE
 
 
-@mixin animation-mixin($name, $from, $to) {
-  @keyframes #{$name} {
-    0% {transform: translate3d($from, 0, 0); opacity: 0;}
-    100% {transform: translate3d($to, 0, 0); opacity: 1;}
+
+
+
+
+@mixin devices ($breakpoint) { //the mixin name is devices
+  
+  @if $breakpoint == tablet {    
+    @media only screen and (min-width: 769px) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {    
+    @media only screen and (min-width: 993px) {
+      @content;
+    }
   }
 }
 
-@mixin co-animation-mixin($name, $from, $to) {
-  @keyframes #{$name} {
-    0% {transform: translate3d($from, 0, 0); margin-bottom: 0;}
-    100% {transform: translate3d($to, 0, 0); margin-bottom: 1%;}
-  }
-}
+// declare mixin parameters, then add the following to the elements: @include devices(desktop) {_:_;} 
