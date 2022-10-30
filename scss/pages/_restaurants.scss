@@ -129,11 +129,11 @@ nav {
 .menu-btn {
   width: 100%;
   display: flex;
-/  justify-content: space-between;
+  justify-content: space-between;
   align-items: flex-end;
   margin: 10px;
   background-color: white;
-  height: 80px
+  height: 80px;
   border: none;  
   border-radius: 15px;
   @include box-shadow (0 4px 8px 0px rgba(0, 0, 0, .2));

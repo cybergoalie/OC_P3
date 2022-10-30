@@ -818,19 +818,16 @@ nav img {
   }
 }
 
-/* ORDER SECTION BEGINS */
-.order-section {
+.order-container {
   width: 100%;
 }
-
-.order-box {
+.order-container div {
   display: flex;
   justify-content: center;
   background-color: #e7e3e6;
   width: 100%;
 }
-
-.order-btn {
+.order-container span {
   border: none;
   box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.2);
   color: white;
@@ -844,11 +841,7 @@ nav img {
   transition: ease 1s;
   width: 65%;
 }
-
-/*box-shadow shorthand: offset-x | offset-y | blur-radius | spread-radius | color */
-.order-btn:hover {
+.order-container span:hover {
   box-shadow: 0px 4px 8px 1px rgb(235, 232, 234);
   transform: scale(1.2);
-}
-
-/* EXTRA PAGES STYLE ENDS *//*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
