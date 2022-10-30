@@ -619,8 +619,10 @@ nav img {
 }
 .menu-container ul li {
   opacity: 0;
-  -webkit-animation: slide-up 1.5s ease-in 0.1s forwards;
-          animation: slide-up 1.5s ease-in 0.1s forwards;
+  -webkit-animation: slide-up 1s ease-in-out 0.1s forwards;
+          animation: slide-up 1s ease-in-out 0.1s forwards;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
 }
 @-webkit-keyframes slide-up {
   from {
@@ -629,7 +631,7 @@ nav img {
   }
   to {
     opacity: 1;
-    transform: translate(0, -20px);
+    transform: translate(0, -15px);
   }
 }
 @keyframes slide-up {
@@ -639,20 +641,20 @@ nav img {
   }
   to {
     opacity: 1;
-    transform: translate(0, -20px);
+    transform: translate(0, -15px);
   }
 }
 .menu-container ul li:nth-child(2n) {
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
-}
-.menu-container ul li:nth-child(3n) {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-}
-.menu-container ul li:nth-child(4n) {
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
+}
+.menu-container ul li:nth-child(3n) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.menu-container ul li:nth-child(4n) {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
 }
 
 .menu-header {
