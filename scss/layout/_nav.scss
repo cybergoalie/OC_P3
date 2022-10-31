@@ -4,21 +4,29 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  justify-content: space-between;
-}
+
+  img {
+    padding: 20px 0px 15px 0px;
+    margin: 0px 10px;
+    max-width: 55%;
+    @include devices(tablet) {
+      max-width: 35%;
+    };
+    @include devices(desktop) {
+      max-width: 25%;
+    };
+  }
   
-.main-nav img {
-  padding: 20px 0px 15px 0px;
-  margin: 0px 10px;
-  max-width: 55%;
-}
-  
-.main-nav div {
-  width: 100%;
-  padding: 15px 0px;
-  font-weight: bold;
-  background-color: $grey;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  div {
+    width: 100%;
+    padding: 15px 0px;
+    font-weight: bold;
+    background-color: $grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    @include devices(tablet) {
+      padding: 5px 0px;
+    }
+  }
 }

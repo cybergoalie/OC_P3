@@ -27,6 +27,9 @@
   background-color: $sand;
   cursor: pointer;
   transition: all .3s ease-in-out;
+  @include devices(tablet) {
+    height: 150px; 
+  }
   
   &:hover {
     background-color: rgb(241, 228, 255)
@@ -61,15 +64,18 @@
   }
 
   .howto-label {
-  position:absolute;
-  margin-left:-8px;
-  margin-top: 30px;
-  color:white;
-  background: $primary;
-  font-size: .9em;
-  border-radius: 50%;
-  padding: 5px 8px 3px 8px;  
-}
+    position:absolute;
+    margin-left:-8px;
+    margin-top: 30px;
+    color:white;
+    background: $primary;
+    font-size: .9em;
+    border-radius: 50%;
+    padding: 5px 8px 3px 8px;  
+    @include devices(tablet) {
+      margin-top: 70px; 
+    }
+  }
 }
 
 

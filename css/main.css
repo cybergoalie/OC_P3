@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* define variables for the primary colors */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand:wght@100;300;400;500;700&display=swap");
 * {
   box-sizing: border-box;
@@ -61,6 +60,11 @@ body {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
+@media only screen and (min-width: 769px) {
+  .howto-btn {
+    height: 150px;
+  }
+}
 .howto-btn:hover {
   background-color: rgb(241, 228, 255);
 }
@@ -100,6 +104,11 @@ body {
   font-size: 0.9em;
   border-radius: 50%;
   padding: 5px 8px 3px 8px;
+}
+@media only screen and (min-width: 769px) {
+  .componentWrapper .howto-label {
+    margin-top: 70px;
+  }
 }
 
 /* animation shorthand: name duration timing-function delay iteration-count direction fill-mode play-state */
@@ -267,6 +276,12 @@ body {
   padding-top: 60px;
   font-size: 1.5em;
 }
+@media only screen and (min-width: 769px) {
+  #rest-section-container h3 {
+    margin-left: 30px;
+    padding-bottom: 10px;
+  }
+}
 
 .restcard-container {
   margin-bottom: 60px;
@@ -280,6 +295,7 @@ body {
 @media only screen and (min-width: 769px) {
   .restcard-container {
     flex-flow: row wrap;
+    margin-bottom: 45px;
   }
 }
 
@@ -289,6 +305,11 @@ body {
 @media only screen and (min-width: 769px) {
   .restcard-wrapper {
     width: 45%;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .restcard-wrapper {
+    width: 24%;
   }
 }
 
@@ -326,12 +347,37 @@ body {
   position: relative;
   transition: all 0.5s ease-in-out;
 }
+@media only screen and (min-width: 769px) {
+  .rest-card {
+    margin: 30px;
+    transition: all 0.35s ease-in-out;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .rest-card {
+    height: 300px;
+    transition: all 0.45s ease-in-out;
+    -ms-box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+    -o-box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+  }
+}
 
 .rest-card:hover {
-  -ms-box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.5);
-  -o-box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.5);
+  -ms-box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1);
   transform: scale(1.01);
+}
+@media only screen and (min-width: 769px) {
+  .rest-card:hover {
+    transform: scale(1.03);
+  }
+}
+@media only screen and (min-width: 993px) {
+  .rest-card:hover {
+    transform: scale(1.01);
+  }
 }
 
 .rest-card:active {
@@ -397,12 +443,24 @@ body {
   text-align: center;
   font-size: 1.5em;
 }
+@media only screen and (min-width: 769px) {
+  .explore-section h1 {
+    padding: 20px;
+    font-size: 1.8em;
+  }
+}
 .explore-section p {
   width: 85%;
   padding: 10px;
   font-size: 18px;
   text-align: center;
   font-weight: 400;
+}
+@media only screen and (min-width: 769px) {
+  .explore-section p {
+    padding: 0px;
+    margin-bottom: 5px;
+  }
 }
 .explore-section a {
   border: none;
@@ -440,7 +498,8 @@ body {
 }
 @media only screen and (min-width: 769px) {
   .howto-section {
-    height: 300px;
+    padding-top: 25px;
+    height: 280px;
   }
 }
 .howto-section h2 {
@@ -462,15 +521,22 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  justify-content: space-between;
 }
-
 .main-nav img {
   padding: 20px 0px 15px 0px;
   margin: 0px 10px;
   max-width: 55%;
 }
-
+@media only screen and (min-width: 769px) {
+  .main-nav img {
+    max-width: 35%;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .main-nav img {
+    max-width: 25%;
+  }
+}
 .main-nav div {
   width: 100%;
   padding: 15px 0px;
@@ -479,6 +545,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media only screen and (min-width: 769px) {
+  .main-nav div {
+    padding: 5px 0px;
+  }
 }
 
 .search-form {
@@ -493,6 +564,11 @@ body {
   padding-left: 10px;
   width: 41%;
   outline: none;
+}
+@media only screen and (min-width: 769px) {
+  .search-form {
+    width: 77%;
+  }
 }
 
 .search-form--active {
@@ -526,9 +602,20 @@ body {
   justify-content: flex-start;
   padding: 30px;
 }
+@media only screen and (min-width: 769px) {
+  .footer-section {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
 .footer-section img {
   filter: invert(1);
   width: 33%;
+}
+@media only screen and (min-width: 993px) {
+  .footer-section img {
+    width: 31%;
+  }
 }
 .footer-section div {
   padding-top: 15px;
@@ -540,6 +627,25 @@ body {
   align-items: flex-start;
   font-size: 1em;
 }
+@media only screen and (min-width: 769px) {
+  .footer-section div {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 769px) and (min-width: 769px) {
+  .footer-section div {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .footer-section div {
+    padding-top: 20px;
+    font-size: 1.3em;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 .footer-section div a {
   margin-top: 15px;
   color: white;
@@ -550,21 +656,21 @@ body {
   margin-right: 5px;
 }
 
-nav {
+.rest-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
 }
-nav a {
+.rest-nav a {
   font-size: 18px;
   margin: 25px;
   text-decoration: none;
 }
-nav img {
+.rest-nav img {
   margin-right: 15%;
-  width: 65%;
   padding: 20px;
+  max-width: 65%;
 }
 
 .rest-header {
@@ -629,10 +735,8 @@ nav img {
 }
 .menu-container ul li {
   opacity: 0;
-  -webkit-animation: slide-up 1s ease-in-out 0.1s forwards;
-          animation: slide-up 1s ease-in-out 0.1s forwards;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  -webkit-animation: slide-up 3s linear 0.1s forwards;
+          animation: slide-up 3s linear 0.1s forwards;
 }
 @-webkit-keyframes slide-up {
   from {
@@ -653,6 +757,10 @@ nav img {
     opacity: 1;
     transform: translate(0, -15px);
   }
+}
+.menu-container ul li:nth-child(1n) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
 }
 .menu-container ul li:nth-child(2n) {
   -webkit-animation-delay: 0.3s;
