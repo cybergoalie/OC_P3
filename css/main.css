@@ -664,13 +664,35 @@ body {
 }
 .rest-nav a {
   font-size: 18px;
-  margin: 25px;
+  padding: 10px;
+  margin: 15px;
   text-decoration: none;
 }
+@media only screen and (min-width: 769px) {
+  .rest-nav a {
+    margin-left: 50px;
+    padding: 15px;
+    font-size: 20px;
+  }
+}
 .rest-nav img {
-  margin-right: 15%;
+  margin-right: 23%;
   padding: 20px;
-  max-width: 65%;
+  max-width: 50%;
+}
+@media only screen and (min-width: 769px) {
+  .rest-nav img {
+    margin-right: 33%;
+    padding: 15px;
+    max-width: 35%;
+  }
+}
+@media only screen and (min-width: 993px) {
+  .rest-nav img {
+    margin-right: 35%;
+    padding: 15px;
+    max-width: 28%;
+  }
 }
 
 .rest-header {

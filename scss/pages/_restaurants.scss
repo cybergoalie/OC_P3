@@ -8,14 +8,33 @@
   
   a {
     font-size: 18px;
-    margin:25px;
+    padding: 10px;
+    margin:15px;
     text-decoration: none;
+    @include devices(tablet) {
+        margin-left: 50px;
+        padding: 15px;
+        font-size: 20px;
+    };
+    @include devices(desktop) {
+      
+    };
   };
   
   img {
-    margin-right: 15%;
+    margin-right: 23%;
     padding: 20px;
-    max-width: 65%;
+    max-width: 50%;
+    @include devices(tablet) {
+      margin-right: 33%;
+      padding: 15px;
+      max-width: 35%;
+    };
+    @include devices(desktop) {
+      margin-right: 35%;
+      padding: 15px;
+      max-width: 28%;
+    };
   }
 }
 
